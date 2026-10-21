@@ -1,0 +1,83 @@
+
+INFO  LogBar: headless/CI mode; progress animations disabled.                   
+WARN  Python GIL is enabled: Multi-gpu quant acceleration for MoE models is sub-optimal and multi-core accelerated cpu packing is also disabled. We recommend Python >= 3.13.3t with Pytorch > 2.8 for mult-gpu quantization and multi-cpu packing with env `PYTHON_GIL=0`.
+INFO  ENV: Auto setting PYTORCH_ALLOC_CONF='expandable_segments:True,max_split_size_mb:256,garbage_collection_threshold:0.7' for memory saving.
+INFO  ENV: Auto setting CUDA_DEVICE_ORDER=PCI_BUS_ID for correctness.           
+INFO  
+
+┌─────────────┐    ┌────────────────────────┐    ┌────────────┐    ┌─────────┐
+│ GPT-QModel  │ -> │ ▓▓▓▓▓▓▓▓▓▓▓▓ 16bit     │ -> │ ▒▒▒▒ 8bit  │ -> │ ░░ 4bit │
+└─────────────┘    └────────────────────────┘    └────────────┘    └─────────┘
+GPT-QModel   : 7.6.0
+Transformers : 5.17.0
+Torch        : 2.11.0+cu130
+Triton       : 3.6.0
+from_quantized: adapter: None
+INFO  Estimated Quantization BPW (bits per weight): 4.2875 bpw, based on [bits: 4, group_size: 128]
+INFO:tokenicer.tokenicer:Tokenicer: Auto fixed pad_token_id=151643 (token='<|endoftext|>').
+INFO  The layer model.embed_tokens is not quantized.                            
+INFO  Kernel: selected: `TorchLinear`                                           
+INFO  Kernel: candidates -> `[TorchLinear]`                                     
+INFO  Kernel: per-module selections -> `[TorchLinear=252]`                      
+INFO  Kernel: selected -> `TorchLinear`.                                        
+INFO  Loader: device = cuda:0                                                   
+INFO  Loader: Built map across 1 GPU(s), 40 entries. First 8: [('model.embed_tokens', 'cuda:0'), ('model.layers.0', 'cuda:0'), ('model.layers.1', 'cuda:0'), ('model.layers.2', 'cuda:0'), ('model.layers.3', 'cuda:0'), ('model.layers.4', 'cuda:0'), ('model.layers.5', 'cuda:0'), ('model.layers.6', 'cuda:0')]
+INFO  Loader: device_map = {'model.embed_tokens': 'cuda:0', 'model.layers.0': 'cuda:0', 'model.layers.1': 'cuda:0', 'model.layers.2': 'cuda:0', 'model.layers.3': 'cuda:0', 'model.layers.4': 'cuda:0', 'model.layers.5': 'cuda:0', 'model.layers.6': 'cuda:0', 'model.layers.7': 'cuda:0', 'model.layers.8': 'cuda:0', 'model.layers.9': 'cuda:0', 'model.layers.10': 'cuda:0', 'model.layers.11': 'cuda:0', 'model.layers.12': 'cuda:0', 'model.layers.13': 'cuda:0', 'model.layers.14': 'cuda:0', 'model.layers.15': 'cuda:0', 'model.layers.16': 'cuda:0', 'model.layers.17': 'cuda:0', 'model.layers.18': 'cuda:0', 'model.layers.19': 'cuda:0', 'model.layers.20': 'cuda:0', 'model.layers.21': 'cuda:0', 'model.layers.22': 'cuda:0', 'model.layers.23': 'cuda:0', 'model.layers.24': 'cuda:0', 'model.layers.25': 'cuda:0', 'model.layers.26': 'cuda:0', 'model.layers.27': 'cuda:0', 'model.layers.28': 'cuda:0', 'model.layers.29': 'cuda:0', 'model.layers.30': 'cuda:0', 'model.layers.31': 'cuda:0', 'model.layers.32': 'cuda:0', 'model.layers.33': 'cuda:0', 'model.layers.34': 'cuda:0', 'model.layers.35': 'cuda:0', 'lm_head': 'cuda:0', 'model.norm': 'cuda:0', 'model.rotary_emb': 'cuda:0'}
+INFO  Format: Converting `format` from `FORMAT.GPTQ` to internal `FORMAT.GPTQ_V2`.
+INFO  Format: Converting GPTQ v1 to v2                                          
+INFO  Kernel: selected: `TorchLinear`                                           
+INFO  Optimize: `TorchLinear` compilation triggered.                            
+INFO  gc.collect() reclaimed 351 objects in 0.286s                              
+INFO:tokenicer.tokenicer:Tokenicer: Auto fixed pad_token_id=151643 (token='<|endoftext|>').
+INFO  Model: Loaded `generation_config`: GenerationConfig {
+  "bos_token_id": 151643,
+  "eos_token_id": 151645,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "pad_token_id": 151643,
+  "use_cache": true
+}
+
+INFO  Model: Auto-fixed `generation_config` mismatch between model and `generation_config.json`.
+INFO  Model: Updated `generation_config`: GenerationConfig {
+  "bos_token_id": 151643,
+  "do_sample": true,
+  "eos_token_id": [
+    151645,
+    151643
+  ],
+  "pad_token_id": 151643,
+  "temperature": 0.6,
+  "top_k": 20,
+  "top_p": 0.95
+}
+
+INFO  Kernel: loaded -> `[TorchLinear]`                                         
+gptq ACCURACY 25 elapsed 10.2
+gptq ACCURACY 50 elapsed 13.7
+gptq ACCURACY 75 elapsed 17.3
+gptq ACCURACY 100 elapsed 21.5
+gptq ACCURACY 125 elapsed 25.0
+gptq ACCURACY 150 elapsed 28.7
+gptq ACCURACY 175 elapsed 33.9
+gptq ACCURACY 200 elapsed 37.7
+gptq ACCURACY 225 elapsed 41.3
+gptq ACCURACY 250 elapsed 44.9
+gptq ACCURACY 275 elapsed 48.5
+gptq ACCURACY 300 elapsed 52.1
+gptq ACCURACY 325 elapsed 55.7
+gptq ACCURACY 350 elapsed 59.3
+gptq ACCURACY 375 elapsed 62.9
+gptq ACCURACY 400 elapsed 66.5
+gptq PPL 50 / 584
+gptq PPL 100 / 584
+gptq PPL 150 / 584
+gptq PPL 200 / 584
+gptq PPL 250 / 584
+gptq PPL 300 / 584
+gptq PPL 350 / 584
+gptq PPL 400 / 584
+gptq PPL 450 / 584
+gptq PPL 500 / 584
+gptq PPL 550 / 584
+DONE gptq {"method": "gptq", "model": "Qwen/Qwen3-8B", "source_revision": "b968826d9c46dd6066d109eabc6255188de91218", "calibration_sequences": 128, "calibration_tokens_per_sequence": 512, "quant_seconds": 314.6897144919999, "quant_peak_gib": 2.798069477081299, "model_bytes": 6115456602, "backend_modules": [], "tokens_per_second": 8.179305519262448, "generation_seconds": [15.63727691999975, 15.64419941899996, 15.666274798999893], "eval_peak_gib": 6.423589706420898, "ppl": 13.281017876564086, "ppl_blocks": 584, "ppl_scored_tokens": 298424, "eval_seconds": 298.30493014600006, "accuracy": 0.775, "finished_time": 1792234350.7100017, "resident_parameter_bytes": 2489935872, "inference_linear_module_types": ["gptqmodel.nn_modules.qlinear.torch.TorchLinear", "torch.nn.modules.linear.Linear"]}

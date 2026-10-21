@@ -1,0 +1,7 @@
+{
+  "headline": "The fastest 4-bit recipe took 0.69 minutes and lost 2.50 points.",
+  "fastest_method": "hqq",
+  "quant_minutes": 0.6862697231999998,
+  "accuracy_loss_pp": 2.5,
+  "verdict": "INCONCLUSIVE"
+}

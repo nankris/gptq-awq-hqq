@@ -1,0 +1,14 @@
+{
+  "gpu": "NVIDIA L4",
+  "session": "b6-044",
+  "start_time": 1792231197.6995184,
+  "stop_time": 1792234439,
+  "tracked_seconds": 3241.300481557846,
+  "session_cu_per_hour": 1.54,
+  "estimated_session_cu": 1.3865563171108564,
+  "initial_account_balance_cu": 152.82,
+  "final_account_balance_cu": 150.02,
+  "account_delta_cu": 2.8,
+  "cu_basis": "Estimated from tracked wall time at 1.54 CU/h; CLI rate was 3.08 CU/h for two L4 sessions before stop and 1.54 CU/h after. Account delta includes another session and is not this experiment cost.",
+  "stopped": true
+}

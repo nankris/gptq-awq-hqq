@@ -1,0 +1,33 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Applying quantization config:   0%|          | 0/252 [00:00<?, ?it/s]Applying quantization config: 100%|██████████| 252/252 [00:00<00:00, 4968.78it/s]
+Compressing model:   0%|          | 0/252 [00:00<?, ?it/s]Compressing model: 100%|██████████| 252/252 [00:00<00:00, 8643.95it/s]
+Dispatching model:   0%|          | 0/547 [00:00<?, ?it/s]Dispatching model: 100%|██████████| 547/547 [00:00<00:00, 19817.78it/s]
+Decompressing model:   0%|          | 0/252 [00:00<?, ?it/s]Decompressing model:   0%|          | 1/252 [00:00<00:43,  5.77it/s]Decompressing model:   8%|▊         | 19/252 [00:00<00:02, 82.53it/s]Decompressing model:  13%|█▎        | 34/252 [00:00<00:02, 107.86it/s]Decompressing model:  19%|█▉        | 49/252 [00:00<00:01, 121.64it/s]Decompressing model:  26%|██▌       | 65/252 [00:00<00:01, 133.95it/s]Decompressing model:  33%|███▎      | 82/252 [00:00<00:01, 144.37it/s]Decompressing model:  38%|███▊      | 97/252 [00:00<00:01, 145.74it/s]Decompressing model:  44%|████▍     | 112/252 [00:00<00:00, 146.84it/s]Decompressing model:  51%|█████     | 128/252 [00:00<00:00, 150.44it/s]Decompressing model:  58%|█████▊    | 145/252 [00:01<00:00, 155.05it/s]Decompressing model:  64%|██████▍   | 161/252 [00:01<00:00, 151.01it/s]Decompressing model:  70%|███████   | 177/252 [00:01<00:00, 153.39it/s]Decompressing model:  77%|███████▋  | 194/252 [00:01<00:00, 157.10it/s]Decompressing model:  83%|████████▎ | 210/252 [00:01<00:00, 152.62it/s]Decompressing model:  90%|████████▉ | 226/252 [00:01<00:00, 154.26it/s]Decompressing model:  96%|█████████▋| 243/252 [00:01<00:00, 157.55it/s]Decompressing model: 100%|██████████| 252/252 [00:01<00:00, 140.82it/s]
+awq ACCURACY 25 elapsed 4.3
+awq ACCURACY 50 elapsed 6.4
+awq ACCURACY 75 elapsed 8.6
+awq ACCURACY 100 elapsed 11.3
+awq ACCURACY 125 elapsed 13.4
+awq ACCURACY 150 elapsed 15.6
+awq ACCURACY 175 elapsed 19.2
+awq ACCURACY 200 elapsed 21.5
+awq ACCURACY 225 elapsed 23.6
+awq ACCURACY 250 elapsed 25.8
+awq ACCURACY 275 elapsed 27.9
+awq ACCURACY 300 elapsed 30.1
+awq ACCURACY 325 elapsed 32.2
+awq ACCURACY 350 elapsed 34.3
+awq ACCURACY 375 elapsed 36.5
+awq ACCURACY 400 elapsed 38.6
+awq PPL 50 / 584
+awq PPL 100 / 584
+awq PPL 150 / 584
+awq PPL 200 / 584
+awq PPL 250 / 584
+awq PPL 300 / 584
+awq PPL 350 / 584
+awq PPL 400 / 584
+awq PPL 450 / 584
+awq PPL 500 / 584
+awq PPL 550 / 584
+DONE awq {"method": "awq", "model": "Qwen/Qwen3-8B", "source_revision": "b968826d9c46dd6066d109eabc6255188de91218", "calibration_sequences": 128, "calibration_tokens_per_sequence": 512, "quant_seconds": 839.6469862629999, "quant_peak_gib": 21.141939163208008, "model_bytes": 6110047273, "backend_modules": [], "tokens_per_second": 12.792302002435084, "generation_seconds": [10.015439030999914, 10.00029720700013, 10.002316800999779], "eval_peak_gib": 16.145087242126465, "ppl": 13.245288026516496, "ppl_blocks": 584, "ppl_scored_tokens": 298424, "eval_seconds": 209.72630890999972, "accuracy": 0.775, "finished_time": 1792233917.1546953, "resident_parameter_bytes": 16544266176, "inference_linear_module_types": ["torch.nn.modules.linear.Linear"]}

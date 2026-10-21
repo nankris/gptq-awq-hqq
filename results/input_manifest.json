@@ -1,0 +1,17 @@
+{
+  "seed": 44,
+  "n_items": 400,
+  "calibration_sequences": 128,
+  "test_tokens": 299078,
+  "ppl_blocks": 584,
+  "dataset_fingerprints": {
+    "mmlu": "436299c1c09696bb",
+    "arc": "a4361c3f3e560fcd",
+    "wikitext_test": "a46124b21ac53738"
+  },
+  "hashes": {
+    "items": "4508136d1234cc12e3a127af0745efcd769c008e3c48f798b93ef8bd06b46275",
+    "calibration_ids": "7fc5d9fefea4d85bf2f66db82e076be822aadca1e2d13ff5a954c9820a76a27c",
+    "test_ids": "30f4e38c17536cb9cab6177afdd3c011572992ab675e86e7a6b8bacfa977581a"
+  }
+}

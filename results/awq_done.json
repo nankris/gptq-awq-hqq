@@ -1,0 +1,28 @@
+{
+  "method": "awq",
+  "model": "Qwen/Qwen3-8B",
+  "source_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "calibration_sequences": 128,
+  "calibration_tokens_per_sequence": 512,
+  "quant_seconds": 839.6469862629999,
+  "quant_peak_gib": 21.141939163208008,
+  "model_bytes": 6110047273,
+  "backend_modules": [],
+  "tokens_per_second": 12.792302002435084,
+  "generation_seconds": [
+    10.015439030999914,
+    10.00029720700013,
+    10.002316800999779
+  ],
+  "eval_peak_gib": 16.145087242126465,
+  "ppl": 13.245288026516496,
+  "ppl_blocks": 584,
+  "ppl_scored_tokens": 298424,
+  "eval_seconds": 209.72630890999972,
+  "accuracy": 0.775,
+  "finished_time": 1792233917.1546953,
+  "resident_parameter_bytes": 16544266176,
+  "inference_linear_module_types": [
+    "torch.nn.modules.linear.Linear"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "method": "hqq",
+  "model": "Qwen/Qwen3-8B",
+  "source_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "calibration_sequences": 0,
+  "calibration_tokens_per_sequence": 0,
+  "quant_seconds": 41.176183391999984,
+  "quant_peak_gib": 16.241559505462646,
+  "loader": "native hqq AutoHQQHFModel (Transformers 5 HqqConfig loader unsupported)",
+  "model_bytes": 6191602118,
+  "backend_modules": [
+    "hqq.core.quantize.HQQLinear"
+  ],
+  "tokens_per_second": 2.3848123986722998,
+  "generation_seconds": [
+    53.67872863499997,
+    53.67632598299997,
+    53.6639002539996
+  ],
+  "eval_peak_gib": 6.492378234863281,
+  "ppl": 13.293552493830154,
+  "ppl_blocks": 584,
+  "ppl_scored_tokens": 298424,
+  "eval_seconds": 711.9707089350004,
+  "accuracy": 0.7675,
+  "finished_time": 1792233645.9500368,
+  "resident_parameter_bytes": 5962819584,
+  "inference_linear_module_types": [
+    "hqq.core.quantize.HQQLinear",
+    "torch.nn.modules.linear.Linear"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "input_hashes_verified": true,
+  "methods": {
+    "bf16": {
+      "predictions": 400,
+      "perplexity_blocks": 584,
+      "correct": 317,
+      "ppl_recomputed": 12.876465945517369,
+      "passed": true
+    },
+    "gptq": {
+      "predictions": 400,
+      "perplexity_blocks": 584,
+      "correct": 310,
+      "ppl_recomputed": 13.281017876564086,
+      "passed": true
+    },
+    "awq": {
+      "predictions": 400,
+      "perplexity_blocks": 584,
+      "correct": 310,
+      "ppl_recomputed": 13.245288026516496,
+      "passed": true
+    },
+    "hqq": {
+      "predictions": 400,
+      "perplexity_blocks": 584,
+      "correct": 307,
+      "ppl_recomputed": 13.293552493830154,
+      "passed": true
+    }
+  }
+}

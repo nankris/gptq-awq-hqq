@@ -1,0 +1,25 @@
+{
+  "method": "bf16",
+  "model": "Qwen/Qwen3-8B",
+  "source_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "calibration_sequences": 0,
+  "calibration_tokens_per_sequence": 0,
+  "quant_seconds": null,
+  "load_seconds": 5.45616800300013,
+  "quant_peak_gib": null,
+  "model_bytes": 16381516776,
+  "backend_modules": [],
+  "tokens_per_second": 15.089274523298352,
+  "generation_seconds": [
+    8.477795090999962,
+    8.485611869999957,
+    8.485132623000027
+  ],
+  "eval_peak_gib": 15.993354797363281,
+  "ppl": 12.876465945517369,
+  "ppl_blocks": 584,
+  "ppl_scored_tokens": 298424,
+  "eval_seconds": 198.13202255500005,
+  "accuracy": 0.7925,
+  "finished_time": 1792231627.7163072
+}

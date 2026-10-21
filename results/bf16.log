@@ -1,0 +1,41 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating test split:   0%|          | 0/4358 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 4358/4358 [00:00<00:00, 154351.58 examples/s]
+Generating train split:   0%|          | 0/36718 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 36718/36718 [00:00<00:00, 820274.06 examples/s]
+Generating validation split:   0%|          | 0/3760 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 3760/3760 [00:00<00:00, 697751.66 examples/s]
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (2518423 > 131072). Running this sequence through the model will result in indexing errors
+Generating test split:   0%|          | 0/14042 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 14042/14042 [00:00<00:00, 600597.75 examples/s]
+Generating validation split:   0%|          | 0/1531 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 1531/1531 [00:00<00:00, 304479.82 examples/s]
+Generating dev split:   0%|          | 0/285 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 285/285 [00:00<00:00, 105180.52 examples/s]
+Generating auxiliary_train split:   0%|          | 0/99842 [00:00<?, ? examples/s]Generating auxiliary_train split:  25%|██▌       | 25000/99842 [00:00<00:00, 242727.61 examples/s]Generating auxiliary_train split:  59%|█████▉    | 59000/99842 [00:00<00:00, 292713.40 examples/s]Generating auxiliary_train split: 100%|██████████| 99842/99842 [00:00<00:00, 359207.50 examples/s]
+Generating train split:   0%|          | 0/1119 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 1119/1119 [00:00<00:00, 236349.39 examples/s]
+Generating test split:   0%|          | 0/1172 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1172/1172 [00:00<00:00, 271797.21 examples/s]
+Generating validation split:   0%|          | 0/299 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 299/299 [00:00<00:00, 103893.37 examples/s]
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+bf16 ACCURACY 25 elapsed 3.2
+bf16 ACCURACY 50 elapsed 5.3
+bf16 ACCURACY 75 elapsed 7.4
+bf16 ACCURACY 100 elapsed 10.0
+bf16 ACCURACY 125 elapsed 12.0
+bf16 ACCURACY 150 elapsed 14.1
+bf16 ACCURACY 175 elapsed 17.4
+bf16 ACCURACY 200 elapsed 19.6
+bf16 ACCURACY 225 elapsed 21.7
+bf16 ACCURACY 250 elapsed 23.8
+bf16 ACCURACY 275 elapsed 25.9
+bf16 ACCURACY 300 elapsed 28.0
+bf16 ACCURACY 325 elapsed 30.1
+bf16 ACCURACY 350 elapsed 32.2
+bf16 ACCURACY 375 elapsed 34.3
+bf16 ACCURACY 400 elapsed 36.4
+bf16 PPL 50 / 584
+bf16 PPL 100 / 584
+bf16 PPL 150 / 584
+bf16 PPL 200 / 584
+bf16 PPL 250 / 584
+bf16 PPL 300 / 584
+bf16 PPL 350 / 584
+bf16 PPL 400 / 584
+bf16 PPL 450 / 584
+bf16 PPL 500 / 584
+bf16 PPL 550 / 584
+DONE bf16 {"method": "bf16", "model": "Qwen/Qwen3-8B", "source_revision": "b968826d9c46dd6066d109eabc6255188de91218", "calibration_sequences": 0, "calibration_tokens_per_sequence": 0, "quant_seconds": null, "load_seconds": 5.45616800300013, "quant_peak_gib": null, "model_bytes": 16381516776, "backend_modules": [], "tokens_per_second": 15.089274523298352, "generation_seconds": [8.477795090999962, 8.485611869999957, 8.485132623000027], "eval_peak_gib": 15.993354797363281, "ppl": 12.876465945517369, "ppl_blocks": 584, "ppl_scored_tokens": 298424, "eval_seconds": 198.13202255500005, "accuracy": 0.7925, "finished_time": 1792231627.7163072}

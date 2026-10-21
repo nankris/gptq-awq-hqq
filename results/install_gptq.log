@@ -1,0 +1,168 @@
+Collecting gptqmodel
+  Downloading gptqmodel-7.6.0.tar.gz (1.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 75.0 MB/s eta 0:00:00
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: accelerate>=1.13.0 in /usr/local/lib/python3.13/dist-packages (from gptqmodel) (1.15.0)
+Collecting numpy==2.2.6 (from gptqmodel)
+  Downloading numpy-2.2.6-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 6.8 MB/s eta 0:00:00
+Requirement already satisfied: torch>=2.8.0 in /usr/local/lib/python3.13/dist-packages (from gptqmodel) (2.11.0+cu130)
+Requirement already satisfied: safetensors>=0.7.0 in /usr/local/lib/python3.13/dist-packages (from gptqmodel) (0.8.0)
+Requirement already satisfied: filelock in /usr/local/lib/python3.13/dist-packages (from gptqmodel) (4.0.7)
+Requirement already satisfied: transformers>=5.14.0 in /usr/local/lib/python3.13/dist-packages (from gptqmodel) (5.18.0)
+Requirement already satisfied: threadpoolctl>=3.6.0 in /usr/local/lib/python3.13/dist-packages (from gptqmodel) (3.7.0)
+Requirement already satisfied: packaging>=24.2 in /usr/local/lib/python3.13/dist-packages (from gptqmodel) (26.3)
+Collecting device-smi>=0.5.7 (from gptqmodel)
+  Downloading device_smi-0.5.7.tar.gz (26 kB)
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting protobuf>=7.34.0 (from gptqmodel)
+  Downloading protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl.metadata (595 bytes)
+Requirement already satisfied: pillow>=11.3.0 in /usr/local/lib/python3.13/dist-packages (from gptqmodel) (11.3.0)
+Requirement already satisfied: requests>=2.32.2 in /usr/local/lib/python3.13/dist-packages (from gptqmodel) (2.32.4)
+Collecting pypcre>=0.6.2 (from gptqmodel)
+  Downloading pypcre-0.6.2.tar.gz (214 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.0/215.0 kB 23.3 MB/s eta 0:00:00
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting tokenicer>=0.0.14 (from gptqmodel)
+  Downloading tokenicer-0.0.14.tar.gz (14 kB)
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting logbar>=0.4.14 (from gptqmodel)
+  Downloading logbar-0.4.14.tar.gz (115 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 115.6/115.6 kB 15.5 MB/s eta 0:00:00
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: jinja2>=3.1.0 in /usr/local/lib/python3.13/dist-packages (from gptqmodel) (3.1.6)
+Collecting ninja>=1.13.0 (from gptqmodel)
+  Downloading ninja-1.13.2-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.4 kB)
+Collecting maturin>=1.9.4 (from gptqmodel)
+  Downloading maturin-1.15.0-py3-none-manylinux_2_12_x86_64.manylinux2010_x86_64.musllinux_1_1_x86_64.whl.metadata (17 kB)
+Requirement already satisfied: datasets>=3.6.0 in /usr/local/lib/python3.13/dist-packages (from gptqmodel) (4.8.5)
+Requirement already satisfied: pyarrow>=21.0 in /usr/local/lib/python3.13/dist-packages (from gptqmodel) (23.0.1)
+Requirement already satisfied: dill>=0.3.8 in /usr/local/lib/python3.13/dist-packages (from gptqmodel) (0.4.1)
+Collecting torchao>=0.18.0 (from gptqmodel)
+  Downloading torchao-0.18.0-cp310-abi3-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (21 kB)
+Collecting defuser>=0.0.28 (from gptqmodel)
+  Downloading defuser-0.0.28.tar.gz (65 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 65.4/65.4 kB 7.9 MB/s eta 0:00:00
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: psutil in /usr/local/lib/python3.13/dist-packages (from accelerate>=1.13.0->gptqmodel) (5.9.5)
+Requirement already satisfied: pyyaml in /usr/local/lib/python3.13/dist-packages (from accelerate>=1.13.0->gptqmodel) (6.0.3)
+Requirement already satisfied: huggingface_hub>=0.21.0 in /usr/local/lib/python3.13/dist-packages (from accelerate>=1.13.0->gptqmodel) (1.33.0)
+Requirement already satisfied: pandas in /usr/local/lib/python3.13/dist-packages (from datasets>=3.6.0->gptqmodel) (2.2.3)
+Requirement already satisfied: httpx<1.0.0 in /usr/local/lib/python3.13/dist-packages (from datasets>=3.6.0->gptqmodel) (0.28.1)
+Requirement already satisfied: tqdm>=4.66.3 in /usr/local/lib/python3.13/dist-packages (from datasets>=3.6.0->gptqmodel) (4.67.3)
+Requirement already satisfied: xxhash in /usr/local/lib/python3.13/dist-packages (from datasets>=3.6.0->gptqmodel) (4.0.1)
+Requirement already satisfied: multiprocess<0.70.20 in /usr/local/lib/python3.13/dist-packages (from datasets>=3.6.0->gptqmodel) (0.70.19)
+Requirement already satisfied: fsspec<=2026.2.0,>=2023.1.0 in /usr/local/lib/python3.13/dist-packages (from fsspec[http]<=2026.2.0,>=2023.1.0->datasets>=3.6.0->gptqmodel) (2025.12.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.13/dist-packages (from jinja2>=3.1.0->gptqmodel) (3.0.3)
+Requirement already satisfied: charset_normalizer<4,>=2 in /usr/local/lib/python3.13/dist-packages (from requests>=2.32.2->gptqmodel) (3.4.9)
+Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.13/dist-packages (from requests>=2.32.2->gptqmodel) (3.20)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.13/dist-packages (from requests>=2.32.2->gptqmodel) (2.5.0)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.13/dist-packages (from requests>=2.32.2->gptqmodel) (2026.7.22)
+Requirement already satisfied: typing-extensions>=4.10.0 in /usr/local/lib/python3.13/dist-packages (from torch>=2.8.0->gptqmodel) (4.16.0)
+Requirement already satisfied: setuptools<82 in /usr/local/lib/python3.13/dist-packages (from torch>=2.8.0->gptqmodel) (80.10.2)
+Requirement already satisfied: sympy>=1.13.3 in /usr/local/lib/python3.13/dist-packages (from torch>=2.8.0->gptqmodel) (1.14.0)
+Requirement already satisfied: networkx>=2.5.1 in /usr/local/lib/python3.13/dist-packages (from torch>=2.8.0->gptqmodel) (3.7)
+Requirement already satisfied: cuda-toolkit==13.0.2 in /usr/local/lib/python3.13/dist-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.8.0->gptqmodel) (13.0.2)
+Requirement already satisfied: cuda-bindings<14,>=13.0.3 in /usr/local/lib/python3.13/dist-packages (from torch>=2.8.0->gptqmodel) (13.0.3)
+Requirement already satisfied: nvidia-cudnn-cu13==9.19.0.56 in /usr/local/lib/python3.13/dist-packages (from torch>=2.8.0->gptqmodel) (9.19.0.56)
+Requirement already satisfied: nvidia-cusparselt-cu13==0.8.0 in /usr/local/lib/python3.13/dist-packages (from torch>=2.8.0->gptqmodel) (0.8.0)
+Requirement already satisfied: nvidia-nccl-cu13==2.28.9 in /usr/local/lib/python3.13/dist-packages (from torch>=2.8.0->gptqmodel) (2.28.9)
+Requirement already satisfied: nvidia-nvshmem-cu13==3.4.5 in /usr/local/lib/python3.13/dist-packages (from torch>=2.8.0->gptqmodel) (3.4.5)
+Requirement already satisfied: triton==3.6.0 in /usr/local/lib/python3.13/dist-packages (from torch>=2.8.0->gptqmodel) (3.6.0)
+Requirement already satisfied: nvidia-cublas==13.1.0.3.* in /usr/local/lib/python3.13/dist-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.8.0->gptqmodel) (13.1.0.3)
+Requirement already satisfied: nvidia-cuda-runtime==13.0.96.* in /usr/local/lib/python3.13/dist-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.8.0->gptqmodel) (13.0.96)
+Requirement already satisfied: nvidia-cufft==12.0.0.61.* in /usr/local/lib/python3.13/dist-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.8.0->gptqmodel) (12.0.0.61)
+Requirement already satisfied: nvidia-cufile==1.15.1.6.* in /usr/local/lib/python3.13/dist-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.8.0->gptqmodel) (1.15.1.6)
+Requirement already satisfied: nvidia-cuda-cupti==13.0.85.* in /usr/local/lib/python3.13/dist-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.8.0->gptqmodel) (13.0.85)
+Requirement already satisfied: nvidia-curand==10.4.0.35.* in /usr/local/lib/python3.13/dist-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.8.0->gptqmodel) (10.4.0.35)
+Requirement already satisfied: nvidia-cusolver==12.0.4.66.* in /usr/local/lib/python3.13/dist-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.8.0->gptqmodel) (12.0.4.66)
+Requirement already satisfied: nvidia-cusparse==12.6.3.3.* in /usr/local/lib/python3.13/dist-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.8.0->gptqmodel) (12.6.3.3)
+Requirement already satisfied: nvidia-nvjitlink==13.0.88.* in /usr/local/lib/python3.13/dist-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.8.0->gptqmodel) (13.0.88)
+Requirement already satisfied: nvidia-cuda-nvrtc==13.0.88.* in /usr/local/lib/python3.13/dist-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.8.0->gptqmodel) (13.0.88)
+Requirement already satisfied: nvidia-nvtx==13.0.85.* in /usr/local/lib/python3.13/dist-packages (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.2; platform_system == "Linux"->torch>=2.8.0->gptqmodel) (13.0.85)
+Requirement already satisfied: regex>=2025.10.22 in /usr/local/lib/python3.13/dist-packages (from transformers>=5.14.0->gptqmodel) (2025.11.3)
+Requirement already satisfied: tokenizers<0.24.0,>=0.23.1 in /usr/local/lib/python3.13/dist-packages (from transformers>=5.14.0->gptqmodel) (0.23.2)
+Requirement already satisfied: typer in /usr/local/lib/python3.13/dist-packages (from transformers>=5.14.0->gptqmodel) (0.27.2)
+Requirement already satisfied: cuda-pathfinder~=1.1 in /usr/local/lib/python3.13/dist-packages (from cuda-bindings<14,>=13.0.3->torch>=2.8.0->gptqmodel) (1.8.2)
+Requirement already satisfied: aiohttp!=4.0.0a0,!=4.0.0a1 in /usr/local/lib/python3.13/dist-packages (from fsspec[http]<=2026.2.0,>=2023.1.0->datasets>=3.6.0->gptqmodel) (3.14.3)
+Requirement already satisfied: anyio in /usr/local/lib/python3.13/dist-packages (from httpx<1.0.0->datasets>=3.6.0->gptqmodel) (4.15.1)
+Requirement already satisfied: httpcore==1.* in /usr/local/lib/python3.13/dist-packages (from httpx<1.0.0->datasets>=3.6.0->gptqmodel) (1.0.9)
+Requirement already satisfied: h11>=0.16 in /usr/local/lib/python3.13/dist-packages (from httpcore==1.*->httpx<1.0.0->datasets>=3.6.0->gptqmodel) (0.16.0)
+Requirement already satisfied: click<9.0.0,>=8.4.2 in /usr/local/lib/python3.13/dist-packages (from huggingface_hub>=0.21.0->accelerate>=1.13.0->gptqmodel) (8.5.0)
+Requirement already satisfied: hf-xet<2.0.0,>=1.6.0 in /usr/local/lib/python3.13/dist-packages (from huggingface_hub>=0.21.0->accelerate>=1.13.0->gptqmodel) (1.6.0)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /usr/local/lib/python3.13/dist-packages (from sympy>=1.13.3->torch>=2.8.0->gptqmodel) (1.3.0)
+Requirement already satisfied: python-dateutil>=2.8.2 in /usr/local/lib/python3.13/dist-packages (from pandas->datasets>=3.6.0->gptqmodel) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in /usr/local/lib/python3.13/dist-packages (from pandas->datasets>=3.6.0->gptqmodel) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in /usr/local/lib/python3.13/dist-packages (from pandas->datasets>=3.6.0->gptqmodel) (2026.4)
+Requirement already satisfied: shellingham>=1.3.0 in /usr/local/lib/python3.13/dist-packages (from typer->transformers>=5.14.0->gptqmodel) (1.5.4)
+Requirement already satisfied: rich>=13.8.0 in /usr/local/lib/python3.13/dist-packages (from typer->transformers>=5.14.0->gptqmodel) (13.9.4)
+Requirement already satisfied: annotated-doc>=0.0.2 in /usr/local/lib/python3.13/dist-packages (from typer->transformers>=5.14.0->gptqmodel) (0.0.5)
+Requirement already satisfied: aiohappyeyeballs>=2.5.0 in /usr/local/lib/python3.13/dist-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets>=3.6.0->gptqmodel) (2.7.1)
+Requirement already satisfied: aiosignal>=1.4.0 in /usr/local/lib/python3.13/dist-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets>=3.6.0->gptqmodel) (1.4.0)
+Requirement already satisfied: attrs>=17.3.0 in /usr/local/lib/python3.13/dist-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets>=3.6.0->gptqmodel) (26.1.0)
+Requirement already satisfied: frozenlist>=1.1.1 in /usr/local/lib/python3.13/dist-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets>=3.6.0->gptqmodel) (1.8.0)
+Requirement already satisfied: multidict<7.0,>=4.5 in /usr/local/lib/python3.13/dist-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets>=3.6.0->gptqmodel) (6.9.1)
+Requirement already satisfied: propcache>=0.2.0 in /usr/local/lib/python3.13/dist-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets>=3.6.0->gptqmodel) (0.5.4)
+Requirement already satisfied: yarl<2.0,>=1.17.0 in /usr/local/lib/python3.13/dist-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets>=3.6.0->gptqmodel) (1.25.1)
+Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.13/dist-packages (from python-dateutil>=2.8.2->pandas->datasets>=3.6.0->gptqmodel) (1.17.0)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/local/lib/python3.13/dist-packages (from rich>=13.8.0->typer->transformers>=5.14.0->gptqmodel) (4.2.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.13/dist-packages (from rich>=13.8.0->typer->transformers>=5.14.0->gptqmodel) (2.21.0)
+Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.13/dist-packages (from markdown-it-py>=2.2.0->rich>=13.8.0->typer->transformers>=5.14.0->gptqmodel) (0.1.2)
+Downloading numpy-2.2.6-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.5/16.5 MB 136.5 MB/s eta 0:00:00
+Downloading maturin-1.15.0-py3-none-manylinux_2_12_x86_64.manylinux2010_x86_64.musllinux_1_1_x86_64.whl (10.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.5/10.5 MB 156.8 MB/s eta 0:00:00
+Downloading ninja-1.13.2-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (183 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 183.4/183.4 kB 21.2 MB/s eta 0:00:00
+Downloading protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl (343 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 343.2/343.2 kB 36.5 MB/s eta 0:00:00
+Downloading torchao-0.18.0-cp310-abi3-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (3.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 114.2 MB/s eta 0:00:00
+Building wheels for collected packages: gptqmodel, defuser, device-smi, logbar, pypcre, tokenicer
+  Building wheel for gptqmodel (pyproject.toml): started
+  Building wheel for gptqmodel (pyproject.toml): finished with status 'done'
+  Created wheel for gptqmodel: filename=gptqmodel-7.6.0-py3-none-any.whl size=1783183 sha256=dcfd0ba896de1392c9ab8391437ba932eae46d2055668bff6ad228072bdac998
+  Stored in directory: /root/.cache/pip/wheels/98/a2/c5/8f86ec22e9b2fb39ec6bc3579a2e6bdddbfda6216932e9ba14
+  Building wheel for defuser (pyproject.toml): started
+  Building wheel for defuser (pyproject.toml): finished with status 'done'
+  Created wheel for defuser: filename=defuser-0.0.28-py3-none-any.whl size=52431 sha256=7747f8db3e229dc87b9f198e2ac33abbad6ee98ceb4616ea525928d1c145224d
+  Stored in directory: /root/.cache/pip/wheels/7b/32/9c/4ac14f4f89714d313e294abcaecc66af1227f7c012fbf94563
+  Building wheel for device-smi (pyproject.toml): started
+  Building wheel for device-smi (pyproject.toml): finished with status 'done'
+  Created wheel for device-smi: filename=device_smi-0.5.7-py3-none-any.whl size=24661 sha256=c829854319a6b60561e6fa4c35d54411940c47133434c01cfd37c61b9fde9082
+  Stored in directory: /root/.cache/pip/wheels/c1/4c/50/d8ab5b6f4f898ebd656cf5175b277eea529eff0e26e6685fe0
+  Building wheel for logbar (pyproject.toml): started
+  Building wheel for logbar (pyproject.toml): finished with status 'done'
+  Created wheel for logbar: filename=logbar-0.4.14-py3-none-any.whl size=83884 sha256=cd2036152c493a50cdc2e6b09c6bbed212e3f818731e807187b0f8bdb70c5b4d
+  Stored in directory: /root/.cache/pip/wheels/6e/06/62/a0cb87d268f5cb26ce9df27267162bd67990c3571f88287ca2
+  Building wheel for pypcre (pyproject.toml): started
+  Building wheel for pypcre (pyproject.toml): finished with status 'done'
+  Created wheel for pypcre: filename=pypcre-0.6.2-cp313-cp313-linux_x86_64.whl size=388010 sha256=c0a9e2ef3f50e4a4acd36473e42c56f82ebf439f02f4b6e001406301b1c3d360
+  Stored in directory: /root/.cache/pip/wheels/04/80/db/0456c2fb3952249042a4670075f0a59a72c7400d07a014eff6
+  Building wheel for tokenicer (pyproject.toml): started
+  Building wheel for tokenicer (pyproject.toml): finished with status 'done'
+  Created wheel for tokenicer: filename=tokenicer-0.0.14-py3-none-any.whl size=16735 sha256=c61df79281c1120c8b2e539b4a699a274a3660e93f14fcce3bb37ffc13903f71
+  Stored in directory: /root/.cache/pip/wheels/c9/91/89/dab1c2289940d97d10d413cd0afe98ce3f2958505de8555f61
+Successfully built gptqmodel defuser device-smi logbar pypcre tokenicer
+Installing collected packages: torchao, tokenicer, pypcre, protobuf, numpy, ninja, maturin, logbar, device-smi, defuser, gptqmodel
+  Attempting uninstall: torchao
+    Found existing installation: torchao 0.10.0
+    Uninstalling torchao-0.10.0:
+      Successfully uninstalled torchao-0.10.0
+  Attempting uninstall: protobuf
+    Found existing installation: protobuf 6.33.6
+    Uninstalling protobuf-6.33.6:
+      Successfully uninstalled protobuf-6.33.6
+  Attempting uninstall: numpy
+    Found existing installation: numpy 2.1.3
+    Uninstalling numpy-2.1.3:
+      Successfully uninstalled numpy-2.1.3
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+ydf 0.15.0 requires protobuf<7.0.0,>=5.29.1, but you have protobuf 7.36.2 which is incompatible.
+Successfully installed defuser-0.0.28 device-smi-0.5.7 gptqmodel-7.6.0 logbar-0.4.14 maturin-1.15.0 ninja-1.13.2 numpy-2.2.6 protobuf-7.36.2 pypcre-0.6.2 tokenicer-0.0.14 torchao-0.18.0

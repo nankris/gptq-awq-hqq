@@ -1,0 +1,297 @@
+{
+  "bf16": {
+    "status": "OK",
+    "method": "bf16",
+    "model": "Qwen/Qwen3-8B",
+    "source_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "calibration_sequences": 0,
+    "calibration_tokens_per_sequence": 0,
+    "quant_seconds": null,
+    "load_seconds": 5.45616800300013,
+    "quant_peak_gib": null,
+    "model_bytes": 16381516776,
+    "backend_modules": [],
+    "tokens_per_second": 15.089274523298352,
+    "generation_seconds": [
+      8.477795090999962,
+      8.485611869999957,
+      8.485132623000027
+    ],
+    "eval_peak_gib": 15.993354797363281,
+    "ppl": 12.876465945517369,
+    "ppl_blocks": 584,
+    "ppl_scored_tokens": 298424,
+    "eval_seconds": 198.13202255500005,
+    "accuracy": 0.7925,
+    "finished_time": 1792231627.7163072,
+    "datasets": {
+      "mmlu": {
+        "n": 200,
+        "correct": 133,
+        "accuracy_pct": 66.5,
+        "accuracy_ci": [
+          60.0,
+          73.0
+        ],
+        "delta_pp": 0.0,
+        "delta_ci": [
+          0.0,
+          0.0
+        ]
+      },
+      "arc": {
+        "n": 200,
+        "correct": 184,
+        "accuracy_pct": 92.0,
+        "accuracy_ci": [
+          88.0,
+          95.5
+        ],
+        "delta_pp": 0.0,
+        "delta_ci": [
+          0.0,
+          0.0
+        ]
+      },
+      "combined": {
+        "n": 400,
+        "correct": 317,
+        "accuracy_pct": 79.25,
+        "accuracy_ci": [
+          75.25,
+          83.0
+        ],
+        "delta_pp": 0.0,
+        "delta_ci": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "gptq": {
+    "status": "OK",
+    "method": "gptq",
+    "model": "Qwen/Qwen3-8B",
+    "source_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "calibration_sequences": 128,
+    "calibration_tokens_per_sequence": 512,
+    "quant_seconds": 314.6897144919999,
+    "quant_peak_gib": 2.798069477081299,
+    "model_bytes": 6115456602,
+    "backend_modules": [],
+    "tokens_per_second": 8.179305519262448,
+    "generation_seconds": [
+      15.63727691999975,
+      15.64419941899996,
+      15.666274798999893
+    ],
+    "eval_peak_gib": 6.423589706420898,
+    "ppl": 13.281017876564086,
+    "ppl_blocks": 584,
+    "ppl_scored_tokens": 298424,
+    "eval_seconds": 298.30493014600006,
+    "accuracy": 0.775,
+    "finished_time": 1792234350.7100017,
+    "resident_parameter_bytes": 2489935872,
+    "inference_linear_module_types": [
+      "gptqmodel.nn_modules.qlinear.torch.TorchLinear",
+      "torch.nn.modules.linear.Linear"
+    ],
+    "datasets": {
+      "mmlu": {
+        "n": 200,
+        "correct": 129,
+        "accuracy_pct": 64.5,
+        "accuracy_ci": [
+          57.99999999999999,
+          71.0
+        ],
+        "delta_pp": -2.0,
+        "delta_ci": [
+          -6.0,
+          2.0
+        ]
+      },
+      "arc": {
+        "n": 200,
+        "correct": 181,
+        "accuracy_pct": 90.5,
+        "accuracy_ci": [
+          86.0,
+          94.5
+        ],
+        "delta_pp": -1.5,
+        "delta_ci": [
+          -4.5,
+          1.5
+        ]
+      },
+      "combined": {
+        "n": 400,
+        "correct": 310,
+        "accuracy_pct": 77.5,
+        "accuracy_ci": [
+          73.5,
+          81.5
+        ],
+        "delta_pp": -1.7500000000000002,
+        "delta_ci": [
+          -4.25,
+          0.75
+        ]
+      }
+    }
+  },
+  "awq": {
+    "status": "OK",
+    "method": "awq",
+    "model": "Qwen/Qwen3-8B",
+    "source_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "calibration_sequences": 128,
+    "calibration_tokens_per_sequence": 512,
+    "quant_seconds": 839.6469862629999,
+    "quant_peak_gib": 21.141939163208008,
+    "model_bytes": 6110047273,
+    "backend_modules": [],
+    "tokens_per_second": 12.792302002435084,
+    "generation_seconds": [
+      10.015439030999914,
+      10.00029720700013,
+      10.002316800999779
+    ],
+    "eval_peak_gib": 16.145087242126465,
+    "ppl": 13.245288026516496,
+    "ppl_blocks": 584,
+    "ppl_scored_tokens": 298424,
+    "eval_seconds": 209.72630890999972,
+    "accuracy": 0.775,
+    "finished_time": 1792233917.1546953,
+    "resident_parameter_bytes": 16544266176,
+    "inference_linear_module_types": [
+      "torch.nn.modules.linear.Linear"
+    ],
+    "datasets": {
+      "mmlu": {
+        "n": 200,
+        "correct": 129,
+        "accuracy_pct": 64.5,
+        "accuracy_ci": [
+          57.99999999999999,
+          71.0
+        ],
+        "delta_pp": -2.0,
+        "delta_ci": [
+          -5.5,
+          1.5
+        ]
+      },
+      "arc": {
+        "n": 200,
+        "correct": 181,
+        "accuracy_pct": 90.5,
+        "accuracy_ci": [
+          86.0,
+          94.5
+        ],
+        "delta_pp": -1.5,
+        "delta_ci": [
+          -4.0,
+          0.5
+        ]
+      },
+      "combined": {
+        "n": 400,
+        "correct": 310,
+        "accuracy_pct": 77.5,
+        "accuracy_ci": [
+          73.25,
+          81.5
+        ],
+        "delta_pp": -1.7500000000000002,
+        "delta_ci": [
+          -3.75,
+          0.25
+        ]
+      }
+    }
+  },
+  "hqq": {
+    "status": "OK",
+    "method": "hqq",
+    "model": "Qwen/Qwen3-8B",
+    "source_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+    "calibration_sequences": 0,
+    "calibration_tokens_per_sequence": 0,
+    "quant_seconds": 41.176183391999984,
+    "quant_peak_gib": 16.241559505462646,
+    "loader": "native hqq AutoHQQHFModel (Transformers 5 HqqConfig loader unsupported)",
+    "model_bytes": 6191602118,
+    "backend_modules": [
+      "hqq.core.quantize.HQQLinear"
+    ],
+    "tokens_per_second": 2.3848123986722998,
+    "generation_seconds": [
+      53.67872863499997,
+      53.67632598299997,
+      53.6639002539996
+    ],
+    "eval_peak_gib": 6.492378234863281,
+    "ppl": 13.293552493830154,
+    "ppl_blocks": 584,
+    "ppl_scored_tokens": 298424,
+    "eval_seconds": 711.9707089350004,
+    "accuracy": 0.7675,
+    "finished_time": 1792233645.9500368,
+    "resident_parameter_bytes": 5962819584,
+    "inference_linear_module_types": [
+      "hqq.core.quantize.HQQLinear",
+      "torch.nn.modules.linear.Linear"
+    ],
+    "datasets": {
+      "mmlu": {
+        "n": 200,
+        "correct": 128,
+        "accuracy_pct": 64.0,
+        "accuracy_ci": [
+          57.487500000000004,
+          70.5
+        ],
+        "delta_pp": -2.5,
+        "delta_ci": [
+          -7.5,
+          2.0
+        ]
+      },
+      "arc": {
+        "n": 200,
+        "correct": 179,
+        "accuracy_pct": 89.5,
+        "accuracy_ci": [
+          85.0,
+          93.5
+        ],
+        "delta_pp": -2.5,
+        "delta_ci": [
+          -5.0,
+          0.0
+        ]
+      },
+      "combined": {
+        "n": 400,
+        "correct": 307,
+        "accuracy_pct": 76.75,
+        "accuracy_ci": [
+          72.75,
+          80.75
+        ],
+        "delta_pp": -2.5,
+        "delta_ci": [
+          -5.25,
+          0.25
+        ]
+      }
+    }
+  },
+  "verdict": "INCONCLUSIVE"
+}

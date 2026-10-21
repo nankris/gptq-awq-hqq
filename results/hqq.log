@@ -1,0 +1,70 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Traceback (most recent call last):
+  File "/content/exp044/run.py", line 128, in <module>
+    else: main(sys.argv[1])
+          ~~~~^^^^^^^^^^^^^
+  File "/content/exp044/run.py", line 54, in main
+    model=AutoModelForCausalLM.from_pretrained(local,quantization_config=HqqConfig(nbits=4,group_size=128,axis=1),torch_dtype=torch.bfloat16,device_map='cuda',attn_implementation='sdpa')
+  File "/usr/local/lib/python3.13/dist-packages/transformers/models/auto/auto_factory.py", line 402, in from_pretrained
+    return model_class.from_pretrained(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        pretrained_model_name_or_path, *model_args, config=config, **hub_kwargs, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/dist-packages/transformers/modeling_utils.py", line 4313, in from_pretrained
+    loading_info, disk_offload_index = cls._load_pretrained_model(model, state_dict, checkpoint_files, load_config)
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/transformers/modeling_utils.py", line 4456, in _load_pretrained_model
+    loading_info, disk_offload_index = convert_and_load_state_dict_in_model(
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        model=model,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        disk_offload_index=disk_offload_index,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/dist-packages/transformers/core_model_loading.py", line 1679, in convert_and_load_state_dict_in_model
+    mapping.quantization_operation = hf_quantizer.get_quantize_ops()
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/dist-packages/transformers/quantizers/base.py", line 290, in get_quantize_ops
+    raise NotImplementedError(
+        f"{self.quantization_config.quant_method} is not available yet and will be supported soon."
+    )
+NotImplementedError: QuantizationMethod.HQQ is not available yet and will be supported soon.
+
+Traceback (most recent call last):
+  File "/content/exp044/run.py", line 128, in <module>
+    else: main(sys.argv[1])
+          ~~~~^^^^^^^^^^^^^
+  File "/content/exp044/run.py", line 54, in main
+    model=AutoModelForCausalLM.from_pretrained(local,quantization_config=HqqConfig(nbits=4,group_size=128,axis=1),torch_dtype=torch.bfloat16,device_map='cuda',attn_implementation='sdpa')
+  File "/usr/local/lib/python3.13/dist-packages/transformers/models/auto/auto_factory.py", line 402, in from_pretrained
+    return model_class.from_pretrained(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        pretrained_model_name_or_path, *model_args, config=config, **hub_kwargs, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/dist-packages/transformers/modeling_utils.py", line 4313, in from_pretrained
+    loading_info, disk_offload_index = cls._load_pretrained_model(model, state_dict, checkpoint_files, load_config)
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/transformers/modeling_utils.py", line 4456, in _load_pretrained_model
+    loading_info, disk_offload_index = convert_and_load_state_dict_in_model(
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        model=model,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        disk_offload_index=disk_offload_index,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/dist-packages/transformers/core_model_loading.py", line 1679, in convert_and_load_state_dict_in_model
+    mapping.quantization_operation = hf_quantizer.get_quantize_ops()
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/dist-packages/transformers/quantizers/base.py", line 290, in get_quantize_ops
+    raise NotImplementedError(
+        f"{self.quantization_config.quant_method} is not available yet and will be supported soon."
+    )
+NotImplementedError: QuantizationMethod.HQQ is not available yet and will be supported soon.

@@ -1,0 +1,16 @@
+
+INFO  LogBar: headless/CI mode; progress animations disabled.                   
+WARN  Python GIL is enabled: Multi-gpu quant acceleration for MoE models is sub-optimal and multi-core accelerated cpu packing is also disabled. We recommend Python >= 3.13.3t with Pytorch > 2.8 for mult-gpu quantization and multi-cpu packing with env `PYTHON_GIL=0`.
+INFO  ENV: Auto setting PYTORCH_ALLOC_CONF='expandable_segments:True,max_split_size_mb:256,garbage_collection_threshold:0.7' for memory saving.
+INFO  ENV: Auto setting CUDA_DEVICE_ORDER=PCI_BUS_ID for correctness.           
+INFO  
+
+┌─────────────┐    ┌────────────────────────┐    ┌────────────┐    ┌─────────┐
+│ GPT-QModel  │ -> │ ▓▓▓▓▓▓▓▓▓▓▓▓ 16bit     │ -> │ ▒▒▒▒ 8bit  │ -> │ ░░ 4bit │
+└─────────────┘    └────────────────────────┘    └────────────┘    └─────────┘
+GPT-QModel   : 7.6.0
+Transformers : 5.17.0
+Torch        : 2.11.0+cu130
+Triton       : 3.6.0
+IMPORTS_OK
+['AWQ_TORCH', 'AWQ_TORCH_ATEN', 'AWQ_TORCH_FUSED', 'AWQ_TORCH_INT8', 'EXL3_TORCH', 'FP8_TORCH', 'GGUF_TORCH', 'GPTQ_TORCH', 'GPTQ_TORCH_ATEN', 'GPTQ_TORCH_FUSED', 'GPTQ_TORCH_INT8', 'QQQ_TORCH', 'TORCH', 'TORCH_AWQ', 'TORCH_FUSED', 'TORCH_FUSED_AWQ', 'TORCH_INT8', 'TORCH_INT8_AWQ']

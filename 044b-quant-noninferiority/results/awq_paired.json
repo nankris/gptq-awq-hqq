@@ -1,0 +1,14 @@
+{
+  "method": "awq",
+  "n": 15214,
+  "delta_pp": -0.9727882213750493,
+  "delta_ci": [
+    -1.4065991849612198,
+    -0.5455501511765479
+  ],
+  "verdict": "INCONCLUSIVE",
+  "gains": 488,
+  "losses": 636,
+  "resamples": 10000,
+  "seed": 44
+}

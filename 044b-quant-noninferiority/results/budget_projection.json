@@ -1,0 +1,9 @@
+{
+  "time_utc": "2026-10-17T17:25:36Z",
+  "primary_sample_n": 15214,
+  "reduction_required": false,
+  "early_bf16_short_prompt_items_per_second": 50.105,
+  "conservative_remaining_minutes": 180,
+  "projected_additional_cu": 4.62,
+  "note": "Planning bound, not a measurement: allows substantial slowdown for longer questions and quantized PyTorch backends. Reassess after each method."
+}

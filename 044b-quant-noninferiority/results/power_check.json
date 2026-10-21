@@ -1,0 +1,17 @@
+{
+  "gptq": {
+    "pilot_n": 400,
+    "pilot_discordance": 0.0675,
+    "projected_halfwidth_pp_n15214": 0.41190665146706223
+  },
+  "awq": {
+    "pilot_n": 400,
+    "pilot_discordance": 0.0425,
+    "projected_halfwidth_pp_n15214": 0.3264062214903883
+  },
+  "hqq": {
+    "pilot_n": 400,
+    "pilot_discordance": 0.075,
+    "projected_halfwidth_pp_n15214": 0.43335903426967703
+  }
+}

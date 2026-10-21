@@ -1,0 +1,315 @@
+{
+  "bootstrap": {
+    "resamples": 10000,
+    "seed": 44,
+    "unit": "paired item",
+    "implementation": "multinomial counts of paired differences; exactly equivalent distribution to iid item resampling"
+  },
+  "n": 15214,
+  "methods": {
+    "bf16": {
+      "n": 15214,
+      "correct": 11074,
+      "accuracy_pct": 72.7882213750493,
+      "accuracy_ci": [
+        72.07177599579336,
+        73.49809386091758
+      ],
+      "quant_seconds": null,
+      "model_bytes": 16381516776,
+      "tokens_per_second": 15.009418967391909,
+      "eval_seconds": 676.1815218010001,
+      "eval_peak_gib": 15.478399753570557,
+      "quant_peak_gib": null,
+      "inference_linear_module_types": [
+        "torch.nn.modules.linear.Linear"
+      ],
+      "resident_parameter_bytes": 16381470720
+    },
+    "gptq": {
+      "n": 15214,
+      "correct": 10937,
+      "accuracy_pct": 71.88773498093862,
+      "accuracy_ci": [
+        71.16471670829499,
+        72.60418036019456
+      ],
+      "delta_pp": -0.9004863941106875,
+      "delta_ci": [
+        -1.354016037859866,
+        -0.4469567503615091
+      ],
+      "discordant": 1225,
+      "gains": 544,
+      "losses": 681,
+      "verdict": "INCONCLUSIVE",
+      "quant_seconds": 319.770686331,
+      "model_bytes": 6115456602,
+      "tokens_per_second": 8.116907088359788,
+      "eval_seconds": 841.3541529270001,
+      "eval_peak_gib": 5.955746173858643,
+      "quant_peak_gib": 2.798069477081299,
+      "inference_linear_module_types": [
+        "gptqmodel.nn_modules.qlinear.torch.TorchLinear",
+        "torch.nn.modules.linear.Linear"
+      ],
+      "resident_parameter_bytes": 2489935872
+    },
+    "awq": {
+      "n": 15214,
+      "correct": 10926,
+      "accuracy_pct": 71.81543315367425,
+      "accuracy_ci": [
+        71.09241488103063,
+        72.5318785329302
+      ],
+      "delta_pp": -0.9727882213750493,
+      "delta_ci": [
+        -1.4065991849612198,
+        -0.5455501511765479
+      ],
+      "discordant": 1124,
+      "gains": 488,
+      "losses": 636,
+      "verdict": "INCONCLUSIVE",
+      "quant_seconds": 849.4884418579995,
+      "model_bytes": 6110047273,
+      "tokens_per_second": 12.849372701217481,
+      "eval_seconds": 692.6635802669998,
+      "eval_peak_gib": 15.759946823120117,
+      "quant_peak_gib": 21.141939163208008,
+      "inference_linear_module_types": [
+        "torch.nn.modules.linear.Linear"
+      ],
+      "resident_parameter_bytes": 16544266176
+    },
+    "hqq": {
+      "n": 15214,
+      "correct": 10705,
+      "accuracy_pct": 70.36282371499935,
+      "accuracy_ci": [
+        69.6266596555804,
+        71.09241488103063
+      ],
+      "delta_pp": -2.425397660049954,
+      "delta_ci": [
+        -2.9052188773498093,
+        -1.9324306559747602
+      ],
+      "discordant": 1459,
+      "gains": 545,
+      "losses": 914,
+      "verdict": "DISPROVEN",
+      "quant_seconds": 41.23268330399969,
+      "model_bytes": 6191602118,
+      "tokens_per_second": 2.3878005976709433,
+      "eval_seconds": 1340.1388881049998,
+      "eval_peak_gib": 6.166990756988525,
+      "quant_peak_gib": 16.241559505462646,
+      "inference_linear_module_types": [
+        "hqq.core.quantize.HQQLinear",
+        "torch.nn.modules.linear.Linear"
+      ],
+      "resident_parameter_bytes": 5962819584
+    }
+  },
+  "datasets": {
+    "combined": {
+      "bf16": {
+        "n": 15214,
+        "correct": 11074,
+        "accuracy_pct": 72.7882213750493,
+        "accuracy_ci": [
+          72.07177599579336,
+          73.49809386091758
+        ]
+      },
+      "gptq": {
+        "n": 15214,
+        "correct": 10937,
+        "accuracy_pct": 71.88773498093862,
+        "accuracy_ci": [
+          71.16471670829499,
+          72.60418036019456
+        ],
+        "delta_pp": -0.9004863941106875,
+        "delta_ci": [
+          -1.354016037859866,
+          -0.4469567503615091
+        ],
+        "discordant": 1225,
+        "gains": 544,
+        "losses": 681,
+        "verdict": "INCONCLUSIVE"
+      },
+      "awq": {
+        "n": 15214,
+        "correct": 10926,
+        "accuracy_pct": 71.81543315367425,
+        "accuracy_ci": [
+          71.09241488103063,
+          72.5318785329302
+        ],
+        "delta_pp": -0.9727882213750493,
+        "delta_ci": [
+          -1.4065991849612198,
+          -0.5455501511765479
+        ],
+        "discordant": 1124,
+        "gains": 488,
+        "losses": 636,
+        "verdict": "INCONCLUSIVE"
+      },
+      "hqq": {
+        "n": 15214,
+        "correct": 10705,
+        "accuracy_pct": 70.36282371499935,
+        "accuracy_ci": [
+          69.6266596555804,
+          71.09241488103063
+        ],
+        "delta_pp": -2.425397660049954,
+        "delta_ci": [
+          -2.9052188773498093,
+          -1.9324306559747602
+        ],
+        "discordant": 1459,
+        "gains": 545,
+        "losses": 914,
+        "verdict": "DISPROVEN"
+      }
+    },
+    "mmlu": {
+      "bf16": {
+        "n": 14042,
+        "correct": 10003,
+        "accuracy_pct": 71.23629112662015,
+        "accuracy_ci": [
+          70.47429141147985,
+          71.99116934909557
+        ]
+      },
+      "gptq": {
+        "n": 14042,
+        "correct": 9884,
+        "accuracy_pct": 70.38883349950149,
+        "accuracy_ci": [
+          69.6268337843612,
+          71.15083321464178
+        ],
+        "delta_pp": -0.847457627118644,
+        "delta_ci": [
+          -1.317654180316194,
+          -0.3703176185728529
+        ],
+        "discordant": 1167,
+        "gains": 524,
+        "losses": 643,
+        "verdict": "INCONCLUSIVE"
+      },
+      "awq": {
+        "n": 14042,
+        "correct": 9874,
+        "accuracy_pct": 70.31761857285287,
+        "accuracy_ci": [
+          69.55544082039596,
+          71.07961828799316
+        ],
+        "delta_pp": -0.9186725537672696,
+        "delta_ci": [
+          -1.3744480843184732,
+          -0.4628970232160661
+        ],
+        "discordant": 1079,
+        "gains": 475,
+        "losses": 604,
+        "verdict": "INCONCLUSIVE"
+      },
+      "hqq": {
+        "n": 14042,
+        "correct": 9655,
+        "accuracy_pct": 68.75801167924797,
+        "accuracy_ci": [
+          67.98176897877795,
+          69.52713288705313
+        ],
+        "delta_pp": -2.478279447372169,
+        "delta_ci": [
+          -2.991026919242273,
+          -1.9584104828372026
+        ],
+        "discordant": 1404,
+        "gains": 528,
+        "losses": 876,
+        "verdict": "DISPROVEN"
+      }
+    },
+    "arc": {
+      "bf16": {
+        "n": 1172,
+        "correct": 1071,
+        "accuracy_pct": 91.38225255972696,
+        "accuracy_ci": [
+          89.76109215017065,
+          92.91808873720136
+        ]
+      },
+      "gptq": {
+        "n": 1172,
+        "correct": 1053,
+        "accuracy_pct": 89.84641638225256,
+        "accuracy_ci": [
+          88.05460750853243,
+          91.55290102389078
+        ],
+        "delta_pp": -1.5358361774744027,
+        "delta_ci": [
+          -2.8156996587030716,
+          -0.25597269624573377
+        ],
+        "discordant": 58,
+        "gains": 20,
+        "losses": 38,
+        "verdict": "INCONCLUSIVE"
+      },
+      "awq": {
+        "n": 1172,
+        "correct": 1052,
+        "accuracy_pct": 89.76109215017065,
+        "accuracy_ci": [
+          87.96928327645051,
+          91.46757679180887
+        ],
+        "delta_pp": -1.621160409556314,
+        "delta_ci": [
+          -2.7303754266211606,
+          -0.5119453924914675
+        ],
+        "discordant": 45,
+        "gains": 13,
+        "losses": 32,
+        "verdict": "INCONCLUSIVE"
+      },
+      "hqq": {
+        "n": 1172,
+        "correct": 1050,
+        "accuracy_pct": 89.59044368600682,
+        "accuracy_ci": [
+          87.79863481228669,
+          91.29692832764505
+        ],
+        "delta_pp": -1.7918088737201365,
+        "delta_ci": [
+          -3.0716723549488054,
+          -0.5119453924914675
+        ],
+        "discordant": 55,
+        "gains": 17,
+        "losses": 38,
+        "verdict": "INCONCLUSIVE"
+      }
+    }
+  },
+  "headline_method": "gptq",
+  "hqq_fastest": true
+}

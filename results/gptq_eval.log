@@ -1,0 +1,176 @@
+
+INFO  LogBar: headless/CI mode; progress animations disabled.                   
+WARN  Python GIL is enabled: Multi-gpu quant acceleration for MoE models is sub-optimal and multi-core accelerated cpu packing is also disabled. We recommend Python >= 3.13.3t with Pytorch > 2.8 for mult-gpu quantization and multi-cpu packing with env `PYTHON_GIL=0`.
+INFO  ENV: Auto setting PYTORCH_ALLOC_CONF='expandable_segments:True,max_split_size_mb:256,garbage_collection_threshold:0.7' for memory saving.
+INFO  ENV: Auto setting CUDA_DEVICE_ORDER=PCI_BUS_ID for correctness.           
+INFO  
+
+┌─────────────┐    ┌────────────────────────┐    ┌────────────┐    ┌─────────┐
+│ GPT-QModel  │ -> │ ▓▓▓▓▓▓▓▓▓▓▓▓ 16bit     │ -> │ ▒▒▒▒ 8bit  │ -> │ ░░ 4bit │
+└─────────────┘    └────────────────────────┘    └────────────┘    └─────────┘
+GPT-QModel   : 7.6.0
+Transformers : 5.17.0
+Torch        : 2.11.0+cu130
+Triton       : 3.6.0
+from_quantized: adapter: None
+INFO  Estimated Quantization BPW (bits per weight): 4.2875 bpw, based on [bits: 4, group_size: 128]
+INFO:tokenicer.tokenicer:Tokenicer: Auto fixed pad_token_id=151643 (token='<|endoftext|>').
+INFO  The layer model.embed_tokens is not quantized.                            
+INFO  Kernel: selected: `TorchLinear`                                           
+INFO  Kernel: candidates -> `[TorchLinear]`                                     
+INFO  Kernel: per-module selections -> `[TorchLinear=252]`                      
+INFO  Kernel: selected -> `TorchLinear`.                                        
+INFO  Loader: device = cuda:0                                                   
+INFO  Loader: Built map across 1 GPU(s), 40 entries. First 8: [('model.embed_tokens', 'cuda:0'), ('model.layers.0', 'cuda:0'), ('model.layers.1', 'cuda:0'), ('model.layers.2', 'cuda:0'), ('model.layers.3', 'cuda:0'), ('model.layers.4', 'cuda:0'), ('model.layers.5', 'cuda:0'), ('model.layers.6', 'cuda:0')]
+INFO  Loader: device_map = {'model.embed_tokens': 'cuda:0', 'model.layers.0': 'cuda:0', 'model.layers.1': 'cuda:0', 'model.layers.2': 'cuda:0', 'model.layers.3': 'cuda:0', 'model.layers.4': 'cuda:0', 'model.layers.5': 'cuda:0', 'model.layers.6': 'cuda:0', 'model.layers.7': 'cuda:0', 'model.layers.8': 'cuda:0', 'model.layers.9': 'cuda:0', 'model.layers.10': 'cuda:0', 'model.layers.11': 'cuda:0', 'model.layers.12': 'cuda:0', 'model.layers.13': 'cuda:0', 'model.layers.14': 'cuda:0', 'model.layers.15': 'cuda:0', 'model.layers.16': 'cuda:0', 'model.layers.17': 'cuda:0', 'model.layers.18': 'cuda:0', 'model.layers.19': 'cuda:0', 'model.layers.20': 'cuda:0', 'model.layers.21': 'cuda:0', 'model.layers.22': 'cuda:0', 'model.layers.23': 'cuda:0', 'model.layers.24': 'cuda:0', 'model.layers.25': 'cuda:0', 'model.layers.26': 'cuda:0', 'model.layers.27': 'cuda:0', 'model.layers.28': 'cuda:0', 'model.layers.29': 'cuda:0', 'model.layers.30': 'cuda:0', 'model.layers.31': 'cuda:0', 'model.layers.32': 'cuda:0', 'model.layers.33': 'cuda:0', 'model.layers.34': 'cuda:0', 'model.layers.35': 'cuda:0', 'lm_head': 'cuda:0', 'model.norm': 'cuda:0', 'model.rotary_emb': 'cuda:0'}
+INFO  Format: Converting `format` from `FORMAT.GPTQ` to internal `FORMAT.GPTQ_V2`.
+INFO  Format: Converting GPTQ v1 to v2                                          
+INFO  Kernel: selected: `TorchLinear`                                           
+INFO  Optimize: `TorchLinear` compilation triggered.                            
+INFO  gc.collect() reclaimed 351 objects in 0.314s                              
+INFO:tokenicer.tokenicer:Tokenicer: Auto fixed pad_token_id=151643 (token='<|endoftext|>').
+INFO  Model: Loaded `generation_config`: GenerationConfig {
+  "bos_token_id": 151643,
+  "eos_token_id": 151645,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "pad_token_id": 151643,
+  "use_cache": true
+}
+
+INFO  Model: Auto-fixed `generation_config` mismatch between model and `generation_config.json`.
+INFO  Model: Updated `generation_config`: GenerationConfig {
+  "bos_token_id": 151643,
+  "do_sample": true,
+  "eos_token_id": [
+    151645,
+    151643
+  ],
+  "pad_token_id": 151643,
+  "temperature": 0.6,
+  "top_k": 20,
+  "top_p": 0.95
+}
+
+INFO  Kernel: loaded -> `[TorchLinear]`                                         
+EVAL_PLAN gptq remaining 15214 batches 1186 token_budget 2048
+gptq ACCURACY 16 elapsed 13.6 items_per_second 1.176
+gptq ACCURACY 176 elapsed 16.88 items_per_second 10.426
+gptq ACCURACY 336 elapsed 20.23 items_per_second 16.607
+gptq ACCURACY 496 elapsed 23.71 items_per_second 20.915
+gptq ACCURACY 656 elapsed 27.25 items_per_second 24.071
+gptq ACCURACY 816 elapsed 30.77 items_per_second 26.52
+gptq ACCURACY 976 elapsed 34.31 items_per_second 28.444
+gptq ACCURACY 1136 elapsed 37.92 items_per_second 29.956
+gptq ACCURACY 1296 elapsed 41.53 items_per_second 31.208
+gptq ACCURACY 1456 elapsed 45.12 items_per_second 32.269
+gptq ACCURACY 1616 elapsed 48.76 items_per_second 33.145
+gptq ACCURACY 1776 elapsed 52.41 items_per_second 33.889
+gptq ACCURACY 1936 elapsed 56.08 items_per_second 34.524
+gptq ACCURACY 2096 elapsed 59.74 items_per_second 35.085
+gptq ACCURACY 2256 elapsed 63.43 items_per_second 35.565
+gptq ACCURACY 2416 elapsed 67.13 items_per_second 35.988
+gptq ACCURACY 2576 elapsed 70.87 items_per_second 36.347
+gptq ACCURACY 2736 elapsed 74.89 items_per_second 36.533
+gptq ACCURACY 2896 elapsed 79.02 items_per_second 36.65
+gptq ACCURACY 3056 elapsed 83.17 items_per_second 36.743
+gptq ACCURACY 3216 elapsed 87.35 items_per_second 36.816
+gptq ACCURACY 3376 elapsed 91.58 items_per_second 36.864
+gptq ACCURACY 3536 elapsed 95.82 items_per_second 36.904
+gptq ACCURACY 3696 elapsed 100.07 items_per_second 36.933
+gptq ACCURACY 3856 elapsed 104.35 items_per_second 36.951
+gptq ACCURACY 4016 elapsed 108.68 items_per_second 36.953
+gptq ACCURACY 4176 elapsed 113.02 items_per_second 36.95
+gptq ACCURACY 4336 elapsed 117.4 items_per_second 36.934
+gptq ACCURACY 4496 elapsed 121.87 items_per_second 36.892
+gptq ACCURACY 4656 elapsed 126.81 items_per_second 36.716
+gptq ACCURACY 4816 elapsed 131.89 items_per_second 36.516
+gptq ACCURACY 4976 elapsed 137.06 items_per_second 36.304
+gptq ACCURACY 5136 elapsed 142.21 items_per_second 36.116
+gptq ACCURACY 5296 elapsed 147.36 items_per_second 35.938
+gptq ACCURACY 5456 elapsed 152.63 items_per_second 35.745
+gptq ACCURACY 5616 elapsed 157.95 items_per_second 35.554
+gptq ACCURACY 5776 elapsed 163.31 items_per_second 35.368
+gptq ACCURACY 5936 elapsed 168.67 items_per_second 35.194
+gptq ACCURACY 6096 elapsed 174.08 items_per_second 35.019
+gptq ACCURACY 6256 elapsed 179.55 items_per_second 34.843
+gptq ACCURACY 6416 elapsed 185.12 items_per_second 34.659
+gptq ACCURACY 6576 elapsed 190.71 items_per_second 34.482
+gptq ACCURACY 6736 elapsed 196.35 items_per_second 34.306
+gptq ACCURACY 6896 elapsed 202.09 items_per_second 34.123
+gptq ACCURACY 7056 elapsed 207.91 items_per_second 33.938
+gptq ACCURACY 7216 elapsed 213.82 items_per_second 33.747
+gptq ACCURACY 7376 elapsed 219.96 items_per_second 33.534
+gptq ACCURACY 7536 elapsed 226.14 items_per_second 33.325
+gptq ACCURACY 7696 elapsed 232.34 items_per_second 33.124
+gptq ACCURACY 7856 elapsed 238.73 items_per_second 32.908
+gptq ACCURACY 8016 elapsed 245.2 items_per_second 32.692
+gptq ACCURACY 8176 elapsed 251.7 items_per_second 32.483
+gptq ACCURACY 8336 elapsed 257.98 items_per_second 32.313
+gptq ACCURACY 8496 elapsed 264.11 items_per_second 32.168
+gptq ACCURACY 8656 elapsed 270.33 items_per_second 32.021
+gptq ACCURACY 8816 elapsed 276.61 items_per_second 31.871
+gptq ACCURACY 8976 elapsed 282.94 items_per_second 31.724
+gptq ACCURACY 9136 elapsed 289.36 items_per_second 31.573
+gptq ACCURACY 9296 elapsed 295.98 items_per_second 31.408
+gptq ACCURACY 9456 elapsed 302.67 items_per_second 31.242
+gptq ACCURACY 9616 elapsed 309.43 items_per_second 31.077
+gptq ACCURACY 9776 elapsed 316.27 items_per_second 30.911
+gptq ACCURACY 9936 elapsed 323.25 items_per_second 30.738
+gptq ACCURACY 10096 elapsed 330.25 items_per_second 30.571
+gptq ACCURACY 10256 elapsed 337.54 items_per_second 30.384
+gptq ACCURACY 10416 elapsed 344.96 items_per_second 30.195
+gptq ACCURACY 10576 elapsed 352.51 items_per_second 30.002
+gptq ACCURACY 10736 elapsed 360.13 items_per_second 29.811
+gptq ACCURACY 10896 elapsed 367.84 items_per_second 29.621
+gptq ACCURACY 11056 elapsed 375.74 items_per_second 29.425
+gptq ACCURACY 11216 elapsed 383.78 items_per_second 29.225
+gptq ACCURACY 11376 elapsed 391.76 items_per_second 29.038
+gptq ACCURACY 11536 elapsed 399.9 items_per_second 28.847
+gptq ACCURACY 11696 elapsed 408.25 items_per_second 28.649
+gptq ACCURACY 11851 elapsed 416.5 items_per_second 28.454
+gptq ACCURACY 12001 elapsed 424.82 items_per_second 28.249
+gptq ACCURACY 12146 elapsed 433.04 items_per_second 28.048
+gptq ACCURACY 12286 elapsed 441.38 items_per_second 27.835
+gptq ACCURACY 12419 elapsed 449.56 items_per_second 27.625
+gptq ACCURACY 12549 elapsed 457.96 items_per_second 27.402
+gptq ACCURACY 12670 elapsed 466.14 items_per_second 27.181
+gptq ACCURACY 12788 elapsed 474.54 items_per_second 26.948
+gptq ACCURACY 12898 elapsed 482.67 items_per_second 26.722
+gptq ACCURACY 13008 elapsed 491.2 items_per_second 26.482
+gptq ACCURACY 13108 elapsed 499.33 items_per_second 26.251
+gptq ACCURACY 13208 elapsed 507.7 items_per_second 26.015
+gptq ACCURACY 13302 elapsed 515.94 items_per_second 25.782
+gptq ACCURACY 13392 elapsed 524.12 items_per_second 25.551
+gptq ACCURACY 13482 elapsed 532.53 items_per_second 25.317
+gptq ACCURACY 13568 elapsed 540.79 items_per_second 25.089
+gptq ACCURACY 13648 elapsed 548.67 items_per_second 24.875
+gptq ACCURACY 13728 elapsed 556.8 items_per_second 24.655
+gptq ACCURACY 13808 elapsed 565.0 items_per_second 24.439
+gptq ACCURACY 13888 elapsed 573.55 items_per_second 24.214
+gptq ACCURACY 13961 elapsed 581.67 items_per_second 24.002
+gptq ACCURACY 14031 elapsed 589.72 items_per_second 23.792
+gptq ACCURACY 14101 elapsed 597.92 items_per_second 23.583
+gptq ACCURACY 14171 elapsed 606.21 items_per_second 23.376
+gptq ACCURACY 14241 elapsed 614.78 items_per_second 23.164
+gptq ACCURACY 14305 elapsed 622.87 items_per_second 22.966
+gptq ACCURACY 14365 elapsed 630.74 items_per_second 22.775
+gptq ACCURACY 14425 elapsed 638.65 items_per_second 22.587
+gptq ACCURACY 14485 elapsed 646.88 items_per_second 22.392
+gptq ACCURACY 14545 elapsed 655.13 items_per_second 22.202
+gptq ACCURACY 14605 elapsed 663.69 items_per_second 22.006
+gptq ACCURACY 14663 elapsed 672.09 items_per_second 21.817
+gptq ACCURACY 14713 elapsed 679.46 items_per_second 21.654
+gptq ACCURACY 14763 elapsed 687.28 items_per_second 21.48
+gptq ACCURACY 14813 elapsed 695.25 items_per_second 21.306
+gptq ACCURACY 14863 elapsed 703.55 items_per_second 21.126
+gptq ACCURACY 14913 elapsed 712.23 items_per_second 20.939
+gptq ACCURACY 14957 elapsed 720.07 items_per_second 20.772
+gptq ACCURACY 14997 elapsed 727.46 items_per_second 20.615
+gptq ACCURACY 15037 elapsed 735.41 items_per_second 20.447
+gptq ACCURACY 15077 elapsed 743.6 items_per_second 20.276
+gptq ACCURACY 15117 elapsed 752.26 items_per_second 20.095
+gptq ACCURACY 15147 elapsed 759.36 items_per_second 19.947
+gptq ACCURACY 15177 elapsed 766.69 items_per_second 19.796
+gptq ACCURACY 15205 elapsed 774.68 items_per_second 19.627
+DONE gptq {"method": "gptq", "model": "Qwen/Qwen3-8B", "source_revision": "b968826d9c46dd6066d109eabc6255188de91218", "calibration_sequences": 128, "calibration_tokens_per_sequence": 512, "quant_seconds": 319.770686331, "quant_peak_gib": 2.798069477081299, "model_bytes": 6115456602, "backend_modules": [], "tokens_per_second": 8.116907088359788, "generation_seconds": [15.759757294999872, 15.779682103999676, 15.769220884999868], "eval_peak_gib": 5.955746173858643, "eval_seconds": 841.3541529270001, "accuracy": 0.7188773498093861, "finished_time": 1792259756.5400028, "resident_parameter_bytes": 2489935872, "inference_linear_module_types": ["gptqmodel.nn_modules.qlinear.torch.TorchLinear", "torch.nn.modules.linear.Linear"]}

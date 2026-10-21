@@ -1,0 +1,14 @@
+{
+  "method": "gptq",
+  "n": 15214,
+  "delta_pp": -0.9004863941106875,
+  "delta_ci": [
+    -1.354016037859866,
+    -0.4469567503615091
+  ],
+  "verdict": "INCONCLUSIVE",
+  "gains": 544,
+  "losses": 681,
+  "resamples": 10000,
+  "seed": 44
+}

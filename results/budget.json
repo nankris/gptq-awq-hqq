@@ -1,0 +1,7 @@
+{
+  "allocation_unix": 1792257330.614711,
+  "deadline_unix": 1792278030.614711,
+  "rate_cu_per_hour": 1.54,
+  "cap_cu": 10,
+  "watchdog_planned_cu": 8.855
+}

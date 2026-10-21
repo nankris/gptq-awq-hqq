@@ -1,0 +1,83 @@
+[?1h=[H[2J[?1000l[?1002l[?1003l[?1006l[?1005l[?2004h[m[?1006l[?1000l[?1002l[?1003l[1;1H[1;24r[c[>c[>q]10;?\]11;?\[1;1H[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K[37m[40m
+[0] 0:bash*                                       "a56873e2dc52" 18:46 17-Oct-26[m[1;1H[m[?1006l[?1000l[?1002l[?1003l[1;1H[1;24r[1;1H[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K[37m[40m
+[0] 0:bash*                                       "a56873e2dc52" 18:46 17-Oct-26[m[1;1H[34m[1m/content[m# python /content/exp044b/poll.py
+  12914    01:09:24 python3 /content/exp044b/watchdog.py
+name, memory.used [MiB], utilization.gpu [%]
+NVIDIA L4, 0 MiB, 0 %
+COMPLETE bf16 accuracy 72.7882 quant_seconds None
+COMPLETE gptq accuracy 71.8877 quant_seconds 319.770686331
+COMPLETE awq accuracy 71.8154 quant_seconds 849.4884418579995
+COMPLETE hqq accuracy 70.3628 quant_seconds 41.23268330399969
+[?7727h[m[?1006l[?1000l[?1002l[?1003l[1;1H[1;24r[9;1H[34m[1m[H/content[m# python /content/exp044b/poll.py[K
+  12914    01:09:24 python3 /content/exp044b/watchdog.py[K
+name, memory.used [MiB], utilization.gpu [%][K
+NVIDIA L4, 0 MiB, 0 %[K
+COMPLETE bf16 accuracy 72.7882 quant_seconds None[K
+COMPLETE gptq accuracy 71.8877 quant_seconds 319.770686331[K
+COMPLETE awq accuracy 71.8154 quant_seconds 849.4884418579995[K
+COMPLETE hqq accuracy 70.3628 quant_seconds 41.23268330399969[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K[37m[40m
+[0] 0:python3*                                    "a56873e2dc52" 18:46 17-Oct-26[m[9;1HCHECKPOINT_READY 1792262789.8102057
+[34m[1m/content[m# [37m[40m[24;1H[0] 0:bash*                                       "a56873e2dc52" 18:46 17-Oct-26[m[10;11Hexit
+logout
+[1;24r[m[?1l>[H[2J[?1000l[?1002l[?1003l[?1006l[?1005l[?2004l[?7727l[?1004l[exited]
+
+Connection closed.

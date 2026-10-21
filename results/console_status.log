@@ -1,0 +1,62 @@
+[?1h=[H[2J[?1000l[?1002l[?1003l[?1006l[?1005l[?2004h[m[?1006l[?1000l[?1002l[?1003l[1;1H[1;24r[c[>c[>q]10;?\]11;?\[1;1H[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K[37m[40m
+[0] 0:bash*                                       "a56873e2dc52" 17:22 17-Oct-26[m[1;1H[m[?1006l[?1000l[?1002l[?1003l[1;1H[1;24r[1;1H[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K[37m[40m
+[0] 0:bash*                                       "a56873e2dc52" 17:22 17-Oct-26[m[1;1H[34m[1m/content[m# cp /content/run044b_updated.py /content/exp044b/run.py
+tail -n 4 /content/bootstrap044b.log
+tail -n [34m[1m/content[m# tail -n 4 /content/bootstrap044b.log
+/content/ex[34m[1m/content[m# tail -n 4 /content/exp044b/results/install_gptq.log
+tail -n 3 /content/exp044  Building wheel for gptqmodel (pyproject.toml): finished with status 'done'
+  Created wheel for gptqmodel: filename=gptqmodel-7.6.0-py3-none-any.whl size=1783183 sha256=104353bd6bde2257b0c68998a82d170dc0189650aa671ceee8319a45b2f5990d
+  Stored in directory: /root/.cache/pip/wheels/98/a2/c5/8f86ec22e9b2fb39ec6bc3579a2e6bdddbfda6216932e9ba14
+  Building wheel for defuser (pyproject.toml): started
+b/resul[34m[1m/content[m# tail -n 3 /content/exp044b/results/install_awq.log
+exit
+tail: cannot open '/content/exp044b/results/install_awq.log' for reading: No such file or directory
+[34m[1m/content[m# exit
+logout
+[1;24r[m[?1l>[H[2J[?1000l[?1002l[?1003l[?1006l[?1005l[?2004l[?7727l[?1004l[exited]
+
+Connection closed.

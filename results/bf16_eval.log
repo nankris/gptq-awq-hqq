@@ -1,0 +1,130 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Generating test split:   0%|          | 0/14042 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 14042/14042 [00:00<00:00, 360017.95 examples/s]
+Generating validation split:   0%|          | 0/1531 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 1531/1531 [00:00<00:00, 335833.87 examples/s]
+Generating dev split:   0%|          | 0/285 [00:00<?, ? examples/s]Generating dev split: 100%|██████████| 285/285 [00:00<00:00, 113080.75 examples/s]
+Generating auxiliary_train split:   0%|          | 0/99842 [00:00<?, ? examples/s]Generating auxiliary_train split:  25%|██▌       | 25000/99842 [00:00<00:00, 242296.86 examples/s]Generating auxiliary_train split:  59%|█████▉    | 59000/99842 [00:00<00:00, 283393.53 examples/s]Generating auxiliary_train split: 100%|██████████| 99842/99842 [00:00<00:00, 350980.99 examples/s]
+Generating train split:   0%|          | 0/1119 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 1119/1119 [00:00<00:00, 155881.17 examples/s]
+Generating test split:   0%|          | 0/1172 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1172/1172 [00:00<00:00, 268971.56 examples/s]
+Generating validation split:   0%|          | 0/299 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 299/299 [00:00<00:00, 90268.26 examples/s]
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+EVAL_PLAN bf16 remaining 15214 batches 1186 token_budget 2048
+bf16 ACCURACY 16 elapsed 7.94 items_per_second 2.016
+bf16 ACCURACY 176 elapsed 10.23 items_per_second 17.205
+bf16 ACCURACY 336 elapsed 12.51 items_per_second 26.853
+bf16 ACCURACY 496 elapsed 14.84 items_per_second 33.422
+bf16 ACCURACY 656 elapsed 17.21 items_per_second 38.117
+bf16 ACCURACY 816 elapsed 19.62 items_per_second 41.599
+bf16 ACCURACY 976 elapsed 22.04 items_per_second 44.281
+bf16 ACCURACY 1136 elapsed 24.54 items_per_second 46.285
+bf16 ACCURACY 1296 elapsed 27.1 items_per_second 47.828
+bf16 ACCURACY 1456 elapsed 29.66 items_per_second 49.097
+bf16 ACCURACY 1616 elapsed 32.25 items_per_second 50.105
+bf16 ACCURACY 1776 elapsed 34.86 items_per_second 50.946
+bf16 ACCURACY 1936 elapsed 37.48 items_per_second 51.648
+bf16 ACCURACY 2096 elapsed 40.14 items_per_second 52.218
+bf16 ACCURACY 2256 elapsed 42.81 items_per_second 52.698
+bf16 ACCURACY 2416 elapsed 45.5 items_per_second 53.097
+bf16 ACCURACY 2576 elapsed 48.22 items_per_second 53.418
+bf16 ACCURACY 2736 elapsed 50.96 items_per_second 53.684
+bf16 ACCURACY 2896 elapsed 53.82 items_per_second 53.812
+bf16 ACCURACY 3056 elapsed 56.98 items_per_second 53.635
+bf16 ACCURACY 3216 elapsed 60.15 items_per_second 53.464
+bf16 ACCURACY 3376 elapsed 63.34 items_per_second 53.301
+bf16 ACCURACY 3536 elapsed 66.54 items_per_second 53.142
+bf16 ACCURACY 3696 elapsed 69.79 items_per_second 52.957
+bf16 ACCURACY 3856 elapsed 73.08 items_per_second 52.766
+bf16 ACCURACY 4016 elapsed 76.39 items_per_second 52.574
+bf16 ACCURACY 4176 elapsed 79.72 items_per_second 52.383
+bf16 ACCURACY 4336 elapsed 83.11 items_per_second 52.17
+bf16 ACCURACY 4496 elapsed 86.52 items_per_second 51.967
+bf16 ACCURACY 4656 elapsed 90.14 items_per_second 51.654
+bf16 ACCURACY 4816 elapsed 93.88 items_per_second 51.299
+bf16 ACCURACY 4976 elapsed 97.65 items_per_second 50.957
+bf16 ACCURACY 5136 elapsed 101.44 items_per_second 50.632
+bf16 ACCURACY 5296 elapsed 105.25 items_per_second 50.317
+bf16 ACCURACY 5456 elapsed 109.13 items_per_second 49.995
+bf16 ACCURACY 5616 elapsed 113.08 items_per_second 49.666
+bf16 ACCURACY 5776 elapsed 117.05 items_per_second 49.347
+bf16 ACCURACY 5936 elapsed 121.03 items_per_second 49.045
+bf16 ACCURACY 6096 elapsed 125.07 items_per_second 48.741
+bf16 ACCURACY 6256 elapsed 129.17 items_per_second 48.431
+bf16 ACCURACY 6416 elapsed 133.32 items_per_second 48.125
+bf16 ACCURACY 6576 elapsed 137.5 items_per_second 47.825
+bf16 ACCURACY 6736 elapsed 141.73 items_per_second 47.528
+bf16 ACCURACY 6896 elapsed 145.97 items_per_second 47.242
+bf16 ACCURACY 7056 elapsed 150.24 items_per_second 46.963
+bf16 ACCURACY 7216 elapsed 154.55 items_per_second 46.69
+bf16 ACCURACY 7376 elapsed 159.26 items_per_second 46.313
+bf16 ACCURACY 7536 elapsed 164.03 items_per_second 45.944
+bf16 ACCURACY 7696 elapsed 168.86 items_per_second 45.577
+bf16 ACCURACY 7856 elapsed 173.73 items_per_second 45.219
+bf16 ACCURACY 8016 elapsed 178.67 items_per_second 44.866
+bf16 ACCURACY 8176 elapsed 183.67 items_per_second 44.514
+bf16 ACCURACY 8336 elapsed 188.81 items_per_second 44.151
+bf16 ACCURACY 8496 elapsed 194.06 items_per_second 43.781
+bf16 ACCURACY 8656 elapsed 199.37 items_per_second 43.417
+bf16 ACCURACY 8816 elapsed 204.72 items_per_second 43.064
+bf16 ACCURACY 8976 elapsed 210.12 items_per_second 42.718
+bf16 ACCURACY 9136 elapsed 215.64 items_per_second 42.368
+bf16 ACCURACY 9296 elapsed 221.31 items_per_second 42.004
+bf16 ACCURACY 9456 elapsed 227.09 items_per_second 41.641
+bf16 ACCURACY 9616 elapsed 232.9 items_per_second 41.287
+bf16 ACCURACY 9776 elapsed 238.79 items_per_second 40.939
+bf16 ACCURACY 9936 elapsed 244.73 items_per_second 40.6
+bf16 ACCURACY 10096 elapsed 250.72 items_per_second 40.267
+bf16 ACCURACY 10256 elapsed 256.8 items_per_second 39.938
+bf16 ACCURACY 10416 elapsed 262.9 items_per_second 39.62
+bf16 ACCURACY 10576 elapsed 269.36 items_per_second 39.264
+bf16 ACCURACY 10736 elapsed 276.06 items_per_second 38.89
+bf16 ACCURACY 10896 elapsed 282.82 items_per_second 38.527
+bf16 ACCURACY 11056 elapsed 289.64 items_per_second 38.171
+bf16 ACCURACY 11216 elapsed 296.57 items_per_second 37.819
+bf16 ACCURACY 11376 elapsed 303.61 items_per_second 37.469
+bf16 ACCURACY 11536 elapsed 310.79 items_per_second 37.118
+bf16 ACCURACY 11696 elapsed 318.07 items_per_second 36.771
+bf16 ACCURACY 11851 elapsed 325.35 items_per_second 36.426
+bf16 ACCURACY 12001 elapsed 332.62 items_per_second 36.08
+bf16 ACCURACY 12146 elapsed 339.84 items_per_second 35.741
+bf16 ACCURACY 12286 elapsed 347.18 items_per_second 35.388
+bf16 ACCURACY 12419 elapsed 354.42 items_per_second 35.04
+bf16 ACCURACY 12549 elapsed 361.79 items_per_second 34.686
+bf16 ACCURACY 12670 elapsed 369.0 items_per_second 34.336
+bf16 ACCURACY 12788 elapsed 376.31 items_per_second 33.982
+bf16 ACCURACY 12898 elapsed 383.47 items_per_second 33.635
+bf16 ACCURACY 13008 elapsed 390.91 items_per_second 33.276
+bf16 ACCURACY 13108 elapsed 397.99 items_per_second 32.936
+bf16 ACCURACY 13208 elapsed 405.34 items_per_second 32.585
+bf16 ACCURACY 13302 elapsed 412.55 items_per_second 32.243
+bf16 ACCURACY 13392 elapsed 419.69 items_per_second 31.91
+bf16 ACCURACY 13482 elapsed 427.08 items_per_second 31.568
+bf16 ACCURACY 13568 elapsed 434.33 items_per_second 31.239
+bf16 ACCURACY 13648 elapsed 441.32 items_per_second 30.925
+bf16 ACCURACY 13728 elapsed 448.38 items_per_second 30.617
+bf16 ACCURACY 13808 elapsed 455.74 items_per_second 30.298
+bf16 ACCURACY 13888 elapsed 463.17 items_per_second 29.985
+bf16 ACCURACY 13961 elapsed 470.33 items_per_second 29.683
+bf16 ACCURACY 14031 elapsed 477.36 items_per_second 29.393
+bf16 ACCURACY 14101 elapsed 484.47 items_per_second 29.106
+bf16 ACCURACY 14171 elapsed 491.86 items_per_second 28.811
+bf16 ACCURACY 14241 elapsed 499.34 items_per_second 28.52
+bf16 ACCURACY 14305 elapsed 506.18 items_per_second 28.261
+bf16 ACCURACY 14365 elapsed 513.1 items_per_second 27.996
+bf16 ACCURACY 14425 elapsed 520.12 items_per_second 27.734
+bf16 ACCURACY 14485 elapsed 527.26 items_per_second 27.472
+bf16 ACCURACY 14545 elapsed 534.66 items_per_second 27.204
+bf16 ACCURACY 14605 elapsed 542.17 items_per_second 26.938
+bf16 ACCURACY 14663 elapsed 549.48 items_per_second 26.685
+bf16 ACCURACY 14713 elapsed 555.85 items_per_second 26.469
+bf16 ACCURACY 14763 elapsed 562.56 items_per_second 26.242
+bf16 ACCURACY 14813 elapsed 569.6 items_per_second 26.006
+bf16 ACCURACY 14863 elapsed 576.94 items_per_second 25.762
+bf16 ACCURACY 14913 elapsed 584.55 items_per_second 25.512
+bf16 ACCURACY 14957 elapsed 591.39 items_per_second 25.291
+bf16 ACCURACY 14997 elapsed 597.77 items_per_second 25.088
+bf16 ACCURACY 15037 elapsed 604.51 items_per_second 24.875
+bf16 ACCURACY 15077 elapsed 611.69 items_per_second 24.648
+bf16 ACCURACY 15117 elapsed 619.3 items_per_second 24.41
+bf16 ACCURACY 15147 elapsed 625.48 items_per_second 24.217
+bf16 ACCURACY 15177 elapsed 631.86 items_per_second 24.02
+bf16 ACCURACY 15205 elapsed 638.84 items_per_second 23.801
+DONE bf16 {"method": "bf16", "model": "Qwen/Qwen3-8B", "source_revision": "b968826d9c46dd6066d109eabc6255188de91218", "calibration_sequences": 0, "calibration_tokens_per_sequence": 0, "quant_seconds": null, "load_seconds": 6.4974277810001695, "quant_peak_gib": null, "model_bytes": 16381516776, "backend_modules": [], "tokens_per_second": 15.009418967391909, "generation_seconds": [8.535536737999792, 8.521579581000424, 8.526818731000276], "eval_peak_gib": 15.478399753570557, "eval_seconds": 676.1815218010001, "accuracy": 0.727882213750493, "finished_time": 1792258545.3142874, "resident_parameter_bytes": 16381470720, "inference_linear_module_types": ["torch.nn.modules.linear.Linear"]}

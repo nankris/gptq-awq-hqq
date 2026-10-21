@@ -1,0 +1,14 @@
+{
+  "method": "hqq",
+  "n": 15214,
+  "delta_pp": -2.425397660049954,
+  "delta_ci": [
+    -2.9052188773498093,
+    -1.9324306559747602
+  ],
+  "verdict": "DISPROVEN",
+  "gains": 545,
+  "losses": 914,
+  "resamples": 10000,
+  "seed": 44
+}

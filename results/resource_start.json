@@ -1,0 +1,11 @@
+{
+  "account_balance_before_allocation_cu": 140.45,
+  "initial_active_assignments": 0,
+  "session": "b7-044b",
+  "requested_gpu": "L4",
+  "rate_cu_per_hour": 1.54,
+  "rate_basis": "Later CLI account rate 3.08/hour for two L4 assignments; #044 observed 1.54/hour per L4. Account usage is shared and cannot identify a per-session bill.",
+  "conservative_accounting_start": "2026-10-17T17:14:41.102542+00:00",
+  "cap_cu": 10,
+  "session_created_utc": "2026-10-17T17:15:30.614711+00:00"
+}

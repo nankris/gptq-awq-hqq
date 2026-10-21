@@ -1,0 +1,26 @@
+{
+  "method": "bf16",
+  "model": "Qwen/Qwen3-8B",
+  "source_revision": "b968826d9c46dd6066d109eabc6255188de91218",
+  "calibration_sequences": 0,
+  "calibration_tokens_per_sequence": 0,
+  "quant_seconds": null,
+  "load_seconds": 6.4974277810001695,
+  "quant_peak_gib": null,
+  "model_bytes": 16381516776,
+  "backend_modules": [],
+  "tokens_per_second": 15.009418967391909,
+  "generation_seconds": [
+    8.535536737999792,
+    8.521579581000424,
+    8.526818731000276
+  ],
+  "eval_peak_gib": 15.478399753570557,
+  "eval_seconds": 676.1815218010001,
+  "accuracy": 0.727882213750493,
+  "finished_time": 1792258545.3142874,
+  "resident_parameter_bytes": 16381470720,
+  "inference_linear_module_types": [
+    "torch.nn.modules.linear.Linear"
+  ]
+}

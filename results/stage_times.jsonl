@@ -1,0 +1,7 @@
+{"method": "bf16", "stage": "eval", "start": 1792257771.846131, "end": 1792258548.995914, "seconds": 777.149783372879, "returncode": 0}
+{"method": "gptq", "stage": "quantize", "start": 1792258548.99627, "end": 1792258896.6599705, "seconds": 347.6637008190155, "returncode": 0}
+{"method": "gptq", "stage": "eval", "start": 1792258896.6603827, "end": 1792259759.7676055, "seconds": 863.107223033905, "returncode": 0}
+{"method": "awq", "stage": "quantize", "start": 1792259759.7679634, "end": 1792260641.5403764, "seconds": 881.7724132537842, "returncode": 0}
+{"method": "awq", "stage": "eval", "start": 1792260641.5407104, "end": 1792261348.1317992, "seconds": 706.5910890102386, "returncode": 0}
+{"method": "hqq", "stage": "quantize", "start": 1792261348.1321113, "end": 1792261414.9937046, "seconds": 66.86159348487854, "returncode": 0}
+{"method": "hqq", "stage": "eval", "start": 1792261414.99399, "end": 1792262771.1937408, "seconds": 1356.1997511386871, "returncode": 0}

@@ -1,0 +1,28 @@
+{
+  "n": 15214,
+  "methods": [
+    "bf16",
+    "gptq",
+    "awq",
+    "hqq"
+  ],
+  "paired_ids_verified": true,
+  "correctness_recomputed": true,
+  "sha256": {
+    "data.json": "8c0c71add6f204c708c36afd53e2e85fe286ed7991d02644968af83792e0c8a5",
+    "calibration_source.json": "7cb779006e149d3caadbf05f92142e5fb8fe80843632f4f1ba7a55df5a4ed9f4",
+    "bf16_predictions.json": "9f784a3a3686f3448bb9dca8c80b428eae906c76ac8b43627326f00b71d48191",
+    "gptq_predictions.json": "dd556b7802944b8f4f662e7916e6c6138aa28b97b23aa3f78e94e5d3a03e9685",
+    "awq_predictions.json": "f1f97b908cba998ce7729e55727f73e2d0e72354280ca4c6e61c6ebd9b0474f7",
+    "hqq_predictions.json": "1c48d57cfa287df4047bb54f961fbb25f5564e7fa84b1f5afb9f1cc346982d79"
+  },
+  "total_predictions": 60856,
+  "dataset_counts": {
+    "mmlu": 14042,
+    "arc": 1172
+  },
+  "mmlu_subjects": 57,
+  "calibration_sequences": 128,
+  "calibration_tokens_per_sequence": 512,
+  "batch_checks_passed": true
+}

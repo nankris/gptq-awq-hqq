@@ -1,0 +1,54 @@
+[?1h=[H[2J[?1000l[?1002l[?1003l[?1006l[?1005l[?2004h[m[?1006l[?1000l[?1002l[?1003l[1;1H[1;24r[c[>c[>q]10;?\]11;?\[1;1H[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K[37m[40m
+[0] 0:bash*                                       "a56873e2dc52" 17:21 17-Oct-26[m[1;1H[m[?1006l[?1000l[?1002l[?1003l[1;1H[1;24r[1;1H[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K
+[K[37m[40m
+[0] 0:bash*                                       "a56873e2dc52" 17:21 17-Oct-26[m[1;1H[34m[1m/content[m# nohup bash /content/bootstrap044b.sh > /content/bootstrap044b.log 2>&1  < /dev/null & disown
+exit
+[1] 8252
+[34m[1m/content[m# exit
+logout
+[1;24r[m[?1l>[H[2J[?1000l[?1002l[?1003l[?1006l[?1005l[?2004l[?7727l[?1004l[exited]
+
+Connection closed.

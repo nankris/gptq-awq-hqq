@@ -1,0 +1,88 @@
+Experiment 044b — session b7-044b only
+Saved nvidia-smi output:
+Sat Oct 17 17:21:46 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.82.07              Driver Version: 580.82.07      CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA L4                      Off |   00000000:00:03.0 Off |                    0 |
+| N/A   36C    P8             13W /   72W |       0MiB /  23034MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+
+Session-created CLI history:
+{"timestamp": "2026-10-17T17:15:30.614711+00:00", "event_type": "session_created", "endpoint": "gpu-l4-s-kkb-ass1a0-2eu3vmhmxf0kp", "variant": "GPU", "accelerator": "L4", "machine_shape": "STANDARD"}
+
+Detached driver START/EXIT lines:
+START bf16 eval 1792257771.8459618
+EXIT bf16 eval 0 1792258548.996005
+START gptq quantize 1792258548.9961367
+EXIT gptq quantize 0 1792258896.6600528
+START gptq eval 1792258896.6602476
+EXIT gptq eval 0 1792259759.767695
+START awq quantize 1792259759.7678223
+EXIT awq quantize 0 1792260641.5404358
+START awq eval 1792260641.5405214
+EXIT awq eval 0 1792261348.131864
+START hqq quantize 1792261348.131982
+EXIT hqq quantize 0 1792261414.9937792
+START hqq eval 1792261414.993856
+EXIT hqq eval 0 1792262771.1938024
+Raw stage timing records:
+{"method": "bf16", "stage": "eval", "start": 1792257771.846131, "end": 1792258548.995914, "seconds": 777.149783372879, "returncode": 0}
+{"method": "gptq", "stage": "quantize", "start": 1792258548.99627, "end": 1792258896.6599705, "seconds": 347.6637008190155, "returncode": 0}
+{"method": "gptq", "stage": "eval", "start": 1792258896.6603827, "end": 1792259759.7676055, "seconds": 863.107223033905, "returncode": 0}
+{"method": "awq", "stage": "quantize", "start": 1792259759.7679634, "end": 1792260641.5403764, "seconds": 881.7724132537842, "returncode": 0}
+{"method": "awq", "stage": "eval", "start": 1792260641.5407104, "end": 1792261348.1317992, "seconds": 706.5910890102386, "returncode": 0}
+{"method": "hqq", "stage": "quantize", "start": 1792261348.1321113, "end": 1792261414.9937046, "seconds": 66.86159348487854, "returncode": 0}
+{"method": "hqq", "stage": "eval", "start": 1792261414.99399, "end": 1792262771.1937408, "seconds": 1356.1997511386871, "returncode": 0}
+
+Completion metadata excerpts (fields copied from *_done.json):
+{"method": "bf16", "source_revision": "b968826d9c46dd6066d109eabc6255188de91218", "quant_seconds": null, "model_bytes": 16381516776, "tokens_per_second": 15.009418967391909, "generation_seconds": [8.535536737999792, 8.521579581000424, 8.526818731000276], "eval_seconds": 676.1815218010001, "accuracy": 0.727882213750493, "finished_time": 1792258545.3142874, "inference_linear_module_types": ["torch.nn.modules.linear.Linear"]}
+Per-item checkpoint count (bf16): 15214
+{"method": "gptq", "source_revision": "b968826d9c46dd6066d109eabc6255188de91218", "quant_seconds": 319.770686331, "model_bytes": 6115456602, "tokens_per_second": 8.116907088359788, "generation_seconds": [15.759757294999872, 15.779682103999676, 15.769220884999868], "eval_seconds": 841.3541529270001, "accuracy": 0.7188773498093861, "finished_time": 1792259756.5400028, "inference_linear_module_types": ["gptqmodel.nn_modules.qlinear.torch.TorchLinear", "torch.nn.modules.linear.Linear"]}
+Per-item checkpoint count (gptq): 15214
+{"method": "awq", "source_revision": "b968826d9c46dd6066d109eabc6255188de91218", "quant_seconds": 849.4884418579995, "model_bytes": 6110047273, "tokens_per_second": 12.849372701217481, "generation_seconds": [9.970845544999975, 9.952903560999403, 9.960978260000047], "eval_seconds": 692.6635802669998, "accuracy": 0.7181543315367425, "finished_time": 1792261346.544148, "inference_linear_module_types": ["torch.nn.modules.linear.Linear"]}
+Per-item checkpoint count (awq): 15214
+{"method": "hqq", "source_revision": "b968826d9c46dd6066d109eabc6255188de91218", "quant_seconds": 41.23268330399969, "model_bytes": 6191602118, "tokens_per_second": 2.3878005976709433, "generation_seconds": [53.60769607700058, 53.60427760899984, 53.60547496300023], "eval_seconds": 1340.1388881049998, "accuracy": 0.7036282371499935, "finished_time": 1792262769.675138, "inference_linear_module_types": ["hqq.core.quantize.HQQLinear", "torch.nn.modules.linear.Linear"]}
+Per-item checkpoint count (hqq): 15214
+CLI stop confirmation:
+[colab] Stopping session 'b7-044b'...
+[colab] Session terminated.
+
+Final timing and CU estimation:
+{
+  "estimated_minutes": {
+    "setup": 20,
+    "training_eval": 100,
+    "writeup": 15,
+    "total": 135
+  },
+  "start_ist": "2026-10-17T22:44:41.102542+05:30",
+  "gpu": "NVIDIA L4 (23,034 MiB)",
+  "experiment": "044b",
+  "end_ist": "2026-10-18T00:18:28.301781+05:30",
+  "actual_minutes": 93.78665398359298,
+  "per_stage_minutes": {
+    "setup": 10.789695128013364,
+    "gpu_run": 21.60496179262797,
+    "eval": 60.14295021274719,
+    "writeup": 1.2490468502044678
+  },
+  "stage_definitions": "Exclusive wall-clock buckets: setup includes preparation and runtime overhead; GPU run means quantization stages including serialization; eval includes model loading; writeup is finalization after GPU stop. Script/report preparation also overlapped GPU work.",
+  "cu_used_estimate": 2.3539517107433743,
+  "cu_accounting": "session allocation-to-stop duration times 1.54 CU/hour; not a per-session bill",
+  "gpu_stop_ist": "2026-10-18T00:17:13.358970+05:30",
+  "allocation_unix": 1792257330.614711
+}

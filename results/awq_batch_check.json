@@ -1,0 +1,20 @@
+[
+  {
+    "item_id": 1580,
+    "single_prediction": 3,
+    "batch_prediction": 3,
+    "max_option_logprob_difference": 0.4215278625488281
+  },
+  {
+    "item_id": 14690,
+    "single_prediction": 1,
+    "batch_prediction": 1,
+    "max_option_logprob_difference": 0.04722785949707031
+  },
+  {
+    "item_id": 1696,
+    "single_prediction": 3,
+    "batch_prediction": 3,
+    "max_option_logprob_difference": 0.06448745727539062
+  }
+]

@@ -1,0 +1,85 @@
+Sat Oct 17 09:59:57 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.82.07              Driver Version: 580.82.07      CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA L4                      Off |   00000000:00:03.0 Off |                    0 |
+| N/A   42C    P0             19W /   72W |       0MiB /  23034MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+ORIGINAL DRIVER TIMELINE
+START bf16 Sat Oct 17 10:01:56 2026
+EXIT bf16 0 Sat Oct 17 10:07:09 2026
+START hqq Sat Oct 17 10:07:09 2026
+EXIT hqq 1 Sat Oct 17 10:07:20 2026
+START awq Sat Oct 17 10:07:20 2026
+EXIT awq 1 Sat Oct 17 10:21:58 2026
+START gptq Sat Oct 17 10:21:58 2026
+EXIT gptq 1 Sat Oct 17 10:27:43 2026
+
+RECOVERY EVALUATIONS AND FINAL METRICS
+
+BF16
+bf16 ACCURACY 400 elapsed 36.4
+bf16 PPL 550 / 584
+DONE bf16 {"method": "bf16", "model": "Qwen/Qwen3-8B", "source_revision": "b968826d9c46dd6066d109eabc6255188de91218", "calibration_sequences": 0, "calibration_tokens_per_sequence": 0, "quant_seconds": null, "load_seconds": 5.45616800300013, "quant_peak_gib": null, "model_bytes": 16381516776, "backend_modules": [], "tokens_per_second": 15.089274523298352, "generation_seconds": [8.477795090999962, 8.485611869999957, 8.485132623000027], "eval_peak_gib": 15.993354797363281, "ppl": 12.876465945517369, "ppl_blocks": 584, "ppl_scored_tokens": 298424, "eval_seconds": 198.13202255500005, "accuracy": 0.7925, "finished_time": 1792231627.7163072}
+
+HQQ
+HQQ tags ['self_attn.o_proj', 'mlp.up_proj', 'self_attn.v_proj', 'self_attn.q_proj', 'mlp.gate_proj', 'mlp.down_proj', 'self_attn.k_proj'] quantized tags ['self_attn.o_proj', 'mlp.up_proj', 'self_attn.v_proj', 'self_attn.q_proj', 'mlp.gate_proj', 'mlp.down_proj', 'self_attn.k_proj']
+hqq ACCURACY 400 elapsed 178.8
+hqq PPL 550 / 584
+DONE hqq {"method": "hqq", "model": "Qwen/Qwen3-8B", "source_revision": "b968826d9c46dd6066d109eabc6255188de91218", "calibration_sequences": 0, "calibration_tokens_per_sequence": 0, "quant_seconds": 41.176183391999984, "quant_peak_gib": 16.241559505462646, "loader": "native hqq AutoHQQHFModel (Transformers 5 HqqConfig loader unsupported)", "model_bytes": 6191602118, "backend_modules": ["hqq.core.quantize.HQQLinear"], "tokens_per_second": 2.3848123986722998, "generation_seconds": [53.67872863499997, 53.67632598299997, 53.6639002539996], "eval_peak_gib": 6.492378234863281, "ppl": 13.293552493830154, "ppl_blocks": 584, "ppl_scored_tokens": 298424, "eval_seconds": 711.9707089350004, "accuracy": 0.7675, "finished_time": 1792233645.9500368, "resident_parameter_bytes": 5962819584, "inference_linear_module_types": ["hqq.core.quantize.HQQLinear", "torch.nn.modules.linear.Linear"]}
+
+AWQ
+awq ACCURACY 400 elapsed 38.6
+awq PPL 550 / 584
+DONE awq {"method": "awq", "model": "Qwen/Qwen3-8B", "source_revision": "b968826d9c46dd6066d109eabc6255188de91218", "calibration_sequences": 128, "calibration_tokens_per_sequence": 512, "quant_seconds": 839.6469862629999, "quant_peak_gib": 21.141939163208008, "model_bytes": 6110047273, "backend_modules": [], "tokens_per_second": 12.792302002435084, "generation_seconds": [10.015439030999914, 10.00029720700013, 10.002316800999779], "eval_peak_gib": 16.145087242126465, "ppl": 13.245288026516496, "ppl_blocks": 584, "ppl_scored_tokens": 298424, "eval_seconds": 209.72630890999972, "accuracy": 0.775, "finished_time": 1792233917.1546953, "resident_parameter_bytes": 16544266176, "inference_linear_module_types": ["torch.nn.modules.linear.Linear"]}
+
+GPTQ
+gptq ACCURACY 400 elapsed 66.5
+gptq PPL 550 / 584
+DONE gptq {"method": "gptq", "model": "Qwen/Qwen3-8B", "source_revision": "b968826d9c46dd6066d109eabc6255188de91218", "calibration_sequences": 128, "calibration_tokens_per_sequence": 512, "quant_seconds": 314.6897144919999, "quant_peak_gib": 2.798069477081299, "model_bytes": 6115456602, "backend_modules": [], "tokens_per_second": 8.179305519262448, "generation_seconds": [15.63727691999975, 15.64419941899996, 15.666274798999893], "eval_peak_gib": 6.423589706420898, "ppl": 13.281017876564086, "ppl_blocks": 584, "ppl_scored_tokens": 298424, "eval_seconds": 298.30493014600006, "accuracy": 0.775, "finished_time": 1792234350.7100017, "resident_parameter_bytes": 2489935872, "inference_linear_module_types": ["gptqmodel.nn_modules.qlinear.torch.TorchLinear", "torch.nn.modules.linear.Linear"]}
+
+GPU SAMPLES (name, memory MiB, utilization %)
+{"time": 1792233414.787542, "sample": "NVIDIA L4, 16136, 100"}
+{"time": 1792233482.055915, "sample": "NVIDIA L4, 16152, 98"}
+{"time": 1792233587.615831, "sample": "NVIDIA L4, 16152, 100"}
+{"time": 1792233674.8075776, "sample": "NVIDIA L4, 0, 0"}
+{"time": 1792233787.5059974, "sample": "NVIDIA L4, 17670, 100"}
+{"time": 1792233918.447795, "sample": "NVIDIA L4, 17692, 0"}
+{"time": 1792234018.1896036, "sample": "NVIDIA L4, 0, 0"}
+{"time": 1792234233.5994916, "sample": "NVIDIA L4, 7244, 97"}
+{"time": 1792234347.9610984, "sample": "NVIDIA L4, 7246, 97"}
+
+COLLECTION AND TERMINATION
+All four done.json files and 400 predictions / 584 loss blocks each copied locally.
+[colab] Stopping session 'original-run'...
+[colab] Session terminated.
+Current balance: 150.02 compute units
+Usage rate: 1.54/hr
+Active assignments: 1
+{
+  "gpu": "NVIDIA L4",
+  "session": "original-run",
+  "start_time": 1792231197.6995184,
+  "stop_time": 1792234439,
+  "tracked_seconds": 3241.300481557846,
+  "session_cu_per_hour": 1.54,
+  "estimated_session_cu": 1.3865563171108564,
+  "initial_account_balance_cu": 152.82,
+  "final_account_balance_cu": 150.02,
+  "account_delta_cu": 2.8,
+  "cu_basis": "Estimated from tracked wall time at 1.54 CU/h; CLI rate was 3.08 CU/h for two L4 sessions before stop and 1.54 CU/h after. Account delta includes another session and is not this experiment cost.",
+  "stopped": true
+}
